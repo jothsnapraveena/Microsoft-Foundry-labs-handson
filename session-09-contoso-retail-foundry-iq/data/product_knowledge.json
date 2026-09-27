@@ -1,0 +1,194 @@
+[
+  {
+    "id": "KB-RUN-001",
+    "product": "StrideRun Pro",
+    "category": "Running Shoes",
+    "article_type": "sizing",
+    "title": "StrideRun Pro sizing guidance",
+    "content": "StrideRun Pro runs about a half size small. Customers between sizes should size up. Wide (2E) fits are available in sizes 8 to 12 only. Exchanges for size are free within 30 days per the support handbook."
+  },
+  {
+    "id": "KB-RUN-002",
+    "product": "StrideRun Pro",
+    "category": "Running Shoes",
+    "article_type": "care",
+    "title": "Cleaning and drying StrideRun Pro",
+    "content": "Hand wash with mild soap and cold water. Remove the insole and air dry for 24 hours away from direct heat. Never machine dry: heat above 50C warps the foam midsole and voids the defect coverage."
+  },
+  {
+    "id": "KB-RUN-003",
+    "product": "StrideRun Pro",
+    "category": "Running Shoes",
+    "article_type": "known_issue",
+    "title": "Squeaking in the left or right shoe",
+    "content": "A squeak under the arch is almost always trapped moisture under the insole, not a defect. Remove the insole, dry both parts for 24 hours, and dust the footbed lightly with talc. If squeaking persists after drying, treat it as a defect claim."
+  },
+  {
+    "id": "KB-RUN-004",
+    "product": "StrideRun Pro",
+    "category": "Running Shoes",
+    "article_type": "known_issue",
+    "title": "Sole separation within 90 days",
+    "content": "Sole separation at the toe within 90 days of purchase is a known manufacturing defect for batches produced in Q2 2026. Offer a replacement in the same size or a full refund regardless of the 30-day return window. Log it as a product defect with the batch code printed inside the tongue."
+  },
+  {
+    "id": "KB-RUN-005",
+    "product": "All running shoes",
+    "category": "Running Shoes",
+    "article_type": "care",
+    "title": "When to replace running shoes",
+    "content": "Running shoes should be replaced after roughly 500 to 800 km. Visible midsole creasing and uneven outsole wear are normal wear, not defects, and are not covered by warranty."
+  },
+  {
+    "id": "KB-OUT-001",
+    "product": "Northpeak Down Jacket",
+    "category": "Outerwear",
+    "article_type": "care",
+    "title": "Washing a down jacket",
+    "content": "Machine wash cold on a gentle cycle with the zipper closed. Tumble dry on low with two clean tennis balls to restore loft. Do not dry clean: solvents strip the water-repellent finish."
+  },
+  {
+    "id": "KB-OUT-002",
+    "product": "Northpeak Down Jacket",
+    "category": "Outerwear",
+    "article_type": "troubleshooting",
+    "title": "Stuck or misaligned zipper",
+    "content": "Rub graphite from a pencil along the zipper teeth, then work the slider gently. If a tooth is missing or the slider is cracked, the jacket qualifies for a free zipper repair or an exchange within 30 days."
+  },
+  {
+    "id": "KB-OUT-003",
+    "product": "All outerwear",
+    "category": "Outerwear",
+    "article_type": "sizing",
+    "title": "Outerwear fit guidance",
+    "content": "Contoso outerwear is cut for layering. Customers who plan to wear only a t-shirt underneath should consider one size down. Size exchanges are free within 30 days."
+  },
+  {
+    "id": "KB-OUT-004",
+    "product": "Drizzle Rain Shell",
+    "category": "Outerwear",
+    "article_type": "known_issue",
+    "title": "Water beading stops working",
+    "content": "Loss of water beading is normal after 10 to 20 washes. Re-apply a spray-on durable water repellent and tumble dry on low to reactivate it. This is not a defect."
+  },
+  {
+    "id": "KB-ELE-001",
+    "product": "Pulse Wireless Earbuds",
+    "category": "Electronics",
+    "article_type": "troubleshooting",
+    "title": "Resetting Pulse earbuds",
+    "content": "Place both earbuds in the case, hold the case button for 15 seconds until the light flashes amber three times, then re-pair from the phone's Bluetooth settings."
+  },
+  {
+    "id": "KB-ELE-002",
+    "product": "Pulse Wireless Earbuds",
+    "category": "Electronics",
+    "article_type": "troubleshooting",
+    "title": "One earbud will not charge",
+    "content": "Clean the gold charging contacts on the earbud and inside the case with a dry cotton swab. If the earbud still does not charge after cleaning, it is covered by the 1-year limited warranty."
+  },
+  {
+    "id": "KB-ELE-003",
+    "product": "Pulse Wireless Earbuds",
+    "category": "Electronics",
+    "article_type": "safety",
+    "title": "Charging case becomes hot",
+    "content": "If the charging case becomes hot to the touch, the customer must stop using it and unplug it immediately. This is a safety issue: escalate to a human agent right away and log a product defect. Do not troubleshoot further."
+  },
+  {
+    "id": "KB-ELE-004",
+    "product": "All electronics",
+    "category": "Electronics",
+    "article_type": "policy_note",
+    "title": "Opened electronics returns",
+    "content": "Opened, non-defective electronics may be returned within 30 days with a 15 percent restocking fee. Defective electronics are exempt from the fee. Confirm the defect before waiving the fee."
+  },
+  {
+    "id": "KB-ELE-005",
+    "product": "Glow Smart Lamp",
+    "category": "Electronics",
+    "article_type": "troubleshooting",
+    "title": "Lamp not connecting to Wi-Fi",
+    "content": "The Glow Smart Lamp supports 2.4 GHz Wi-Fi only. Ask the customer to switch the phone to the 2.4 GHz network during setup, then hold the lamp's power button for 10 seconds to restart pairing mode."
+  },
+  {
+    "id": "KB-HOM-001",
+    "product": "BrewMaster Coffee Maker",
+    "category": "Home & Kitchen",
+    "article_type": "care",
+    "title": "Descaling the BrewMaster",
+    "content": "Descale monthly: fill the reservoir with equal parts white vinegar and water, run a full brew cycle, then run two cycles with plain water."
+  },
+  {
+    "id": "KB-HOM-002",
+    "product": "BrewMaster Coffee Maker",
+    "category": "Home & Kitchen",
+    "article_type": "troubleshooting",
+    "title": "Error E2 on the display",
+    "content": "E2 means the water reservoir is not seated. Remove the reservoir and push it back until it clicks."
+  },
+  {
+    "id": "KB-HOM-003",
+    "product": "BrewMaster Coffee Maker",
+    "category": "Home & Kitchen",
+    "article_type": "safety",
+    "title": "Error E4 or overheating",
+    "content": "E4 indicates overheating. Tell the customer to unplug the unit and let it cool for 30 minutes. If E4 appears again, the customer must stop using the unit: escalate as a safety issue and log a product defect."
+  },
+  {
+    "id": "KB-HOM-004",
+    "product": "Everyday Knife Set",
+    "category": "Home & Kitchen",
+    "article_type": "care",
+    "title": "Knife care and warranty",
+    "content": "Hand wash and dry immediately; dishwashers dull and pit the blades. The lifetime warranty covers handle defects and blade breakage under normal use, not dullness or rust from dishwasher use."
+  },
+  {
+    "id": "KB-FIT-001",
+    "product": "FlexCore Yoga Mat",
+    "category": "Fitness",
+    "article_type": "known_issue",
+    "title": "New mat odor",
+    "content": "A light rubber odor is normal for up to 7 days. Unroll the mat and air it out away from direct sunlight. Odor alone is not a defect."
+  },
+  {
+    "id": "KB-FIT-002",
+    "product": "FlexCore Yoga Mat",
+    "category": "Fitness",
+    "article_type": "troubleshooting",
+    "title": "Mat feels slippery",
+    "content": "New mats can feel slippery for the first 3 to 5 sessions. Wiping the surface with a damp cloth and mild soap speeds up break-in."
+  },
+  {
+    "id": "KB-FIT-003",
+    "product": "Grip Resistance Bands",
+    "category": "Fitness",
+    "article_type": "safety",
+    "title": "Band tears or snaps",
+    "content": "Visible nicks or tears mean the band must be retired immediately; a snapping band can cause eye injury. If a band tears within 90 days during normal use, treat it as a defect and log it with the safety flag."
+  },
+  {
+    "id": "KB-BAG-001",
+    "product": "Metro Commuter Backpack",
+    "category": "Bags",
+    "article_type": "care",
+    "title": "Cleaning the backpack",
+    "content": "Spot clean only. Machine washing deforms the laptop sleeve padding and is not covered by warranty."
+  },
+  {
+    "id": "KB-BAG-002",
+    "product": "Metro Commuter Backpack",
+    "category": "Bags",
+    "article_type": "policy_note",
+    "title": "Backpack lifetime warranty",
+    "content": "The lifetime warranty covers zippers, buckles, and seams. It does not cover fabric abrasion or damage from overloading beyond the rated 12 kg."
+  },
+  {
+    "id": "KB-GEN-001",
+    "product": "All products",
+    "category": "General",
+    "article_type": "policy_note",
+    "title": "How to log a product defect",
+    "content": "Every defect report needs the product name, the symptom, the days since purchase, whether there is any safety risk, and the batch or serial code when the customer can provide it. Never include the customer's name, email, phone number, or address in a defect log."
+  }
+]

@@ -1,0 +1,4 @@
+.env
+outputs/
+.ipynb_checkpoints/
+session-notes.md

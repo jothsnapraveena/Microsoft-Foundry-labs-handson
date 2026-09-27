@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5b6b7f"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="560" fill="#ffffff"/>
+  <text x="600" y="38" text-anchor="middle" font-size="24" font-weight="700" fill="#0b3d6e">Session 09 · Contoso Retail Support Agent on Foundry IQ + OpenAPI + Toolbox</text>
+
+  <!-- Column headers -->
+  <text x="140" y="80" text-anchor="middle" font-size="14" font-weight="700" fill="#5b6b7f">KNOWLEDGE SOURCES</text>
+  <text x="470" y="80" text-anchor="middle" font-size="14" font-weight="700" fill="#5b6b7f">FOUNDRY IQ</text>
+  <text x="790" y="80" text-anchor="middle" font-size="14" font-weight="700" fill="#5b6b7f">GOVERNED TOOLS</text>
+  <text x="1080" y="80" text-anchor="middle" font-size="14" font-weight="700" fill="#5b6b7f">CONSUMERS</text>
+
+  <!-- Knowledge sources -->
+  <g>
+    <rect x="30" y="100" width="240" height="86" rx="10" fill="#e8f1fb" stroke="#2f6db5"/>
+    <text x="45" y="124" font-size="14" font-weight="700" fill="#0b3d6e">Search Index KS · indexed</text>
+    <text x="45" y="146" font-size="12.5" fill="#223">Product knowledge articles</text>
+    <text x="45" y="165" font-size="12.5" fill="#223">care · troubleshooting · safety</text>
+
+    <rect x="30" y="202" width="240" height="86" rx="10" fill="#e8f1fb" stroke="#2f6db5"/>
+    <text x="45" y="226" font-size="14" font-weight="700" fill="#0b3d6e">File KS · uploaded</text>
+    <text x="45" y="248" font-size="12.5" fill="#223">Support handbook (PDF)</text>
+    <text x="45" y="267" font-size="12.5" fill="#223">returns · warranty · escalation</text>
+
+    <rect x="30" y="304" width="240" height="86" rx="10" fill="#fff4e0" stroke="#c07a12" stroke-dasharray="6 4"/>
+    <text x="45" y="328" font-size="14" font-weight="700" fill="#7a4a00">Web KS · federated (opt-in)</text>
+    <text x="45" y="350" font-size="12.5" fill="#223">Recall notices, allow-listed</text>
+    <text x="45" y="369" font-size="12.5" fill="#223">domains only</text>
+  </g>
+
+  <!-- KB -->
+  <rect x="330" y="100" width="280" height="290" rx="14" fill="#f3f0fb" stroke="#6a4fb3" stroke-width="2"/>
+  <text x="470" y="128" text-anchor="middle" font-size="16" font-weight="700" fill="#3f2b85">Knowledge Base</text>
+  <rect x="355" y="146" width="230" height="48" rx="8" fill="#fff" stroke="#6a4fb3"/>
+  <text x="470" y="167" text-anchor="middle" font-size="13" font-weight="700" fill="#3f2b85">1 · Plan</text>
+  <text x="470" y="185" text-anchor="middle" font-size="12" fill="#223">decompose into subqueries</text>
+  <rect x="355" y="206" width="230" height="48" rx="8" fill="#fff" stroke="#6a4fb3"/>
+  <text x="470" y="227" text-anchor="middle" font-size="13" font-weight="700" fill="#3f2b85">2 · Retrieve in parallel</text>
+  <text x="470" y="245" text-anchor="middle" font-size="12" fill="#223">route to sources · semantic rerank</text>
+  <rect x="355" y="266" width="230" height="48" rx="8" fill="#fff" stroke="#6a4fb3"/>
+  <text x="470" y="287" text-anchor="middle" font-size="13" font-weight="700" fill="#3f2b85">3 · Synthesize</text>
+  <text x="470" y="305" text-anchor="middle" font-size="12" fill="#223">grounded answer + [ref_id] citations</text>
+  <text x="470" y="345" text-anchor="middle" font-size="12.5" fill="#3f2b85" font-family="Consolas, monospace">knowledge_base_retrieve</text>
+  <text x="470" y="366" text-anchor="middle" font-size="12" fill="#5b6b7f">exposed as an MCP endpoint</text>
+
+  <line x1="270" y1="143" x2="328" y2="200" stroke="#5b6b7f" stroke-width="1.6" marker-end="url(#a)"/>
+  <line x1="270" y1="245" x2="328" y2="238" stroke="#5b6b7f" stroke-width="1.6" marker-end="url(#a)"/>
+  <line x1="270" y1="347" x2="328" y2="280" stroke="#5b6b7f" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#a)"/>
+
+  <!-- OpenAPI -->
+  <rect x="330" y="420" width="280" height="96" rx="14" fill="#e9f7ee" stroke="#2e8b57" stroke-width="2"/>
+  <text x="470" y="448" text-anchor="middle" font-size="16" font-weight="700" fill="#1d5e3a">Retail Catalog API (OpenAPI)</text>
+  <text x="470" y="470" text-anchor="middle" font-size="12.5" fill="#223">system of record from Session 6</text>
+  <text x="470" y="490" text-anchor="middle" font-size="12" fill="#223" font-family="Consolas, monospace">search_products · check_inventory</text>
+  <text x="470" y="507" text-anchor="middle" font-size="12" fill="#223" font-family="Consolas, monospace">get_product_details · get_promotions</text>
+
+  <!-- Toolbox -->
+  <rect x="680" y="160" width="220" height="300" rx="14" fill="#fdf2f4" stroke="#b3405a" stroke-width="2"/>
+  <text x="790" y="190" text-anchor="middle" font-size="16" font-weight="700" fill="#7d1f35">Foundry Toolbox</text>
+  <text x="790" y="212" text-anchor="middle" font-size="12.5" fill="#223">contoso-support-toolbox</text>
+  <rect x="700" y="232" width="180" height="40" rx="8" fill="#fff" stroke="#b3405a"/>
+  <text x="790" y="257" text-anchor="middle" font-size="12.5" fill="#223">MCP → Knowledge Base</text>
+  <rect x="700" y="282" width="180" height="40" rx="8" fill="#fff" stroke="#b3405a"/>
+  <text x="790" y="307" text-anchor="middle" font-size="12.5" fill="#223">OpenAPI → Catalog API</text>
+  <text x="790" y="350" text-anchor="middle" font-size="12" fill="#223">immutable versions</text>
+  <text x="790" y="369" text-anchor="middle" font-size="12" fill="#223">default-version promotion</text>
+  <text x="790" y="388" text-anchor="middle" font-size="12" fill="#223">auth via project connections</text>
+  <text x="790" y="430" text-anchor="middle" font-size="12" fill="#5b6b7f" font-family="Consolas, monospace">/toolboxes/{name}/mcp</text>
+
+  <line x1="610" y1="300" x2="678" y2="252" stroke="#5b6b7f" stroke-width="1.6" marker-end="url(#a)"/>
+  <line x1="610" y1="468" x2="678" y2="302" stroke="#5b6b7f" stroke-width="1.6" marker-end="url(#a)"/>
+
+  <!-- Consumers -->
+  <rect x="960" y="120" width="220" height="110" rx="12" fill="#eef2f7" stroke="#5b6b7f"/>
+  <text x="975" y="146" font-size="14" font-weight="700" fill="#223">Foundry prompt agent</text>
+  <text x="975" y="168" font-size="12.5" fill="#223">contoso-support-agent</text>
+  <text x="975" y="188" font-size="12" fill="#5b6b7f">MCPTool(KB) + OpenApiTool</text>
+  <text x="975" y="207" font-size="12" fill="#5b6b7f">direct wiring · §14</text>
+
+  <rect x="960" y="260" width="220" height="110" rx="12" fill="#eef2f7" stroke="#5b6b7f"/>
+  <text x="975" y="286" font-size="14" font-weight="700" fill="#223">Any MCP client</text>
+  <text x="975" y="308" font-size="12.5" fill="#223">MAF · LangGraph · VS Code</text>
+  <text x="975" y="328" font-size="12" fill="#5b6b7f">one governed endpoint</text>
+  <text x="975" y="347" font-size="12" fill="#5b6b7f">§15</text>
+
+  <rect x="960" y="400" width="220" height="90" rx="12" fill="#fffbe6" stroke="#b39500"/>
+  <text x="975" y="426" font-size="14" font-weight="700" fill="#5c4d00">Validation harness</text>
+  <text x="975" y="448" font-size="12" fill="#223">10 cases · tool routing ·</text>
+  <text x="975" y="466" font-size="12" fill="#223">grounding · guardrails · §16</text>
+
+  <path d="M610,125 L940,125 L940,150 L958,150" fill="none" stroke="#5b6b7f" stroke-width="1.4" stroke-dasharray="4 4" marker-end="url(#a)"/>
+  <path d="M610,505 L930,505 L930,205 L958,205" fill="none" stroke="#5b6b7f" stroke-width="1.4" stroke-dasharray="4 4" marker-end="url(#a)"/>
+  <line x1="900" y1="310" x2="958" y2="315" stroke="#5b6b7f" stroke-width="1.6" marker-end="url(#a)"/>
+
+  <text x="600" y="545" text-anchor="middle" font-size="12" fill="#5b6b7f">Dashed source = opt-in (billed per query). Dashed arrows = direct wiring (§14); solid arrows into consumers = toolbox path (§15).</text>
+</svg>
