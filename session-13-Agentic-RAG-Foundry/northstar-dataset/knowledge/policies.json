@@ -1,0 +1,480 @@
+[
+  {
+    "policy_id": "standard-returns-v1",
+    "topic": "standard-returns",
+    "version": "v1",
+    "effective_from": "2026-01-01",
+    "effective_to": "2026-09-15",
+    "region": "US",
+    "applies_by": "order_date",
+    "source_path": "knowledge/standard-returns-v1.md",
+    "parameters": {
+      "change_of_mind_window_days": 30
+    }
+  },
+  {
+    "policy_id": "standard-returns-v2",
+    "topic": "standard-returns",
+    "version": "v2",
+    "effective_from": "2026-09-15",
+    "effective_to": null,
+    "region": "US",
+    "applies_by": "order_date",
+    "source_path": "knowledge/standard-returns-v2.md",
+    "parameters": {
+      "change_of_mind_window_days": 30
+    }
+  },
+  {
+    "policy_id": "electronics-returns-v1",
+    "topic": "electronics-returns",
+    "version": "v1",
+    "effective_from": "2026-01-01",
+    "effective_to": "2026-09-15",
+    "region": "US",
+    "applies_by": "order_date",
+    "source_path": "knowledge/electronics-returns-v1.md",
+    "parameters": {
+      "change_of_mind_window_days": 14
+    }
+  },
+  {
+    "policy_id": "electronics-returns-v2",
+    "topic": "electronics-returns",
+    "version": "v2",
+    "effective_from": "2026-09-15",
+    "effective_to": null,
+    "region": "US",
+    "applies_by": "order_date",
+    "source_path": "knowledge/electronics-returns-v2.md",
+    "parameters": {
+      "change_of_mind_window_days": 15
+    }
+  },
+  {
+    "policy_id": "defective-items-v1",
+    "topic": "defective-items",
+    "version": "v1",
+    "effective_from": "2026-01-01",
+    "effective_to": "2026-09-15",
+    "region": "US",
+    "applies_by": "order_date",
+    "source_path": "knowledge/defective-items-v1.md",
+    "parameters": {
+      "defect_window_days": 30
+    }
+  },
+  {
+    "policy_id": "defective-items-v2",
+    "topic": "defective-items",
+    "version": "v2",
+    "effective_from": "2026-09-15",
+    "effective_to": null,
+    "region": "US",
+    "applies_by": "order_date",
+    "source_path": "knowledge/defective-items-v2.md",
+    "parameters": {
+      "defect_window_days": 30
+    }
+  },
+  {
+    "policy_id": "final-sale-v1",
+    "topic": "final-sale",
+    "version": "v1",
+    "effective_from": "2026-01-01",
+    "effective_to": "2026-09-15",
+    "region": "US",
+    "applies_by": "order_date",
+    "source_path": "knowledge/final-sale-v1.md",
+    "parameters": {}
+  },
+  {
+    "policy_id": "final-sale-v2",
+    "topic": "final-sale",
+    "version": "v2",
+    "effective_from": "2026-09-15",
+    "effective_to": null,
+    "region": "US",
+    "applies_by": "order_date",
+    "source_path": "knowledge/final-sale-v2.md",
+    "parameters": {}
+  },
+  {
+    "policy_id": "marketplace-v1",
+    "topic": "marketplace",
+    "version": "v1",
+    "effective_from": "2026-01-01",
+    "effective_to": "2026-09-15",
+    "region": "US",
+    "applies_by": "order_date",
+    "source_path": "knowledge/marketplace-v1.md",
+    "parameters": {}
+  },
+  {
+    "policy_id": "marketplace-v2",
+    "topic": "marketplace",
+    "version": "v2",
+    "effective_from": "2026-09-15",
+    "effective_to": null,
+    "region": "US",
+    "applies_by": "order_date",
+    "source_path": "knowledge/marketplace-v2.md",
+    "parameters": {}
+  },
+  {
+    "policy_id": "return-shipping-v1",
+    "topic": "return-shipping",
+    "version": "v1",
+    "effective_from": "2026-01-01",
+    "effective_to": "2026-09-15",
+    "region": "US",
+    "applies_by": "order_date",
+    "source_path": "knowledge/return-shipping-v1.md",
+    "parameters": {
+      "change_of_mind_fee_cents": 700,
+      "defect_fee_cents": 0
+    }
+  },
+  {
+    "policy_id": "return-shipping-v2",
+    "topic": "return-shipping",
+    "version": "v2",
+    "effective_from": "2026-09-15",
+    "effective_to": null,
+    "region": "US",
+    "applies_by": "order_date",
+    "source_path": "knowledge/return-shipping-v2.md",
+    "parameters": {
+      "change_of_mind_fee_cents": 500,
+      "defect_fee_cents": 0
+    }
+  },
+  {
+    "policy_id": "warranty-v1",
+    "topic": "warranty",
+    "version": "v1",
+    "effective_from": "2026-01-01",
+    "effective_to": "2026-09-15",
+    "region": "US",
+    "applies_by": "order_date",
+    "source_path": "knowledge/warranty-v1.md",
+    "parameters": {}
+  },
+  {
+    "policy_id": "warranty-v2",
+    "topic": "warranty",
+    "version": "v2",
+    "effective_from": "2026-09-15",
+    "effective_to": null,
+    "region": "US",
+    "applies_by": "order_date",
+    "source_path": "knowledge/warranty-v2.md",
+    "parameters": {}
+  },
+  {
+    "policy_id": "partial-returns-v1",
+    "topic": "partial-returns",
+    "version": "v1",
+    "effective_from": "2026-01-01",
+    "effective_to": "2026-09-15",
+    "region": "US",
+    "applies_by": "order_date",
+    "source_path": "knowledge/partial-returns-v1.md",
+    "parameters": {}
+  },
+  {
+    "policy_id": "partial-returns-v2",
+    "topic": "partial-returns",
+    "version": "v2",
+    "effective_from": "2026-09-15",
+    "effective_to": null,
+    "region": "US",
+    "applies_by": "order_date",
+    "source_path": "knowledge/partial-returns-v2.md",
+    "parameters": {}
+  },
+  {
+    "policy_id": "duplicate-returns-v1",
+    "topic": "duplicate-returns",
+    "version": "v1",
+    "effective_from": "2026-01-01",
+    "effective_to": "2026-09-15",
+    "region": "US",
+    "applies_by": "order_date",
+    "source_path": "knowledge/duplicate-returns-v1.md",
+    "parameters": {}
+  },
+  {
+    "policy_id": "duplicate-returns-v2",
+    "topic": "duplicate-returns",
+    "version": "v2",
+    "effective_from": "2026-09-15",
+    "effective_to": null,
+    "region": "US",
+    "applies_by": "order_date",
+    "source_path": "knowledge/duplicate-returns-v2.md",
+    "parameters": {}
+  },
+  {
+    "policy_id": "refund-timing-v1",
+    "topic": "refund-timing",
+    "version": "v1",
+    "effective_from": "2026-01-01",
+    "effective_to": "2026-09-15",
+    "region": "US",
+    "applies_by": "event_date",
+    "source_path": "knowledge/refund-timing-v1.md",
+    "parameters": {
+      "inspection_business_days": 2,
+      "posting_business_days_min": 5,
+      "posting_business_days_max": 7
+    }
+  },
+  {
+    "policy_id": "refund-timing-v2",
+    "topic": "refund-timing",
+    "version": "v2",
+    "effective_from": "2026-09-15",
+    "effective_to": null,
+    "region": "US",
+    "applies_by": "event_date",
+    "source_path": "knowledge/refund-timing-v2.md",
+    "parameters": {
+      "inspection_business_days": 2,
+      "posting_business_days_min": 3,
+      "posting_business_days_max": 5
+    }
+  },
+  {
+    "policy_id": "refund-status-v1",
+    "topic": "refund-status",
+    "version": "v1",
+    "effective_from": "2026-01-01",
+    "effective_to": "2026-09-15",
+    "region": "US",
+    "applies_by": "event_date",
+    "source_path": "knowledge/refund-status-v1.md",
+    "parameters": {}
+  },
+  {
+    "policy_id": "refund-status-v2",
+    "topic": "refund-status",
+    "version": "v2",
+    "effective_from": "2026-09-15",
+    "effective_to": null,
+    "region": "US",
+    "applies_by": "event_date",
+    "source_path": "knowledge/refund-status-v2.md",
+    "parameters": {}
+  },
+  {
+    "policy_id": "shipping-status-v1",
+    "topic": "shipping-status",
+    "version": "v1",
+    "effective_from": "2026-01-01",
+    "effective_to": "2026-09-15",
+    "region": "US",
+    "applies_by": "event_date",
+    "source_path": "knowledge/shipping-status-v1.md",
+    "parameters": {}
+  },
+  {
+    "policy_id": "shipping-status-v2",
+    "topic": "shipping-status",
+    "version": "v2",
+    "effective_from": "2026-09-15",
+    "effective_to": null,
+    "region": "US",
+    "applies_by": "event_date",
+    "source_path": "knowledge/shipping-status-v2.md",
+    "parameters": {}
+  },
+  {
+    "policy_id": "lost-parcel-v1",
+    "topic": "lost-parcel",
+    "version": "v1",
+    "effective_from": "2026-01-01",
+    "effective_to": "2026-09-15",
+    "region": "US",
+    "applies_by": "event_date",
+    "source_path": "knowledge/lost-parcel-v1.md",
+    "parameters": {
+      "investigation_after_overdue_days": 3
+    }
+  },
+  {
+    "policy_id": "lost-parcel-v2",
+    "topic": "lost-parcel",
+    "version": "v2",
+    "effective_from": "2026-09-15",
+    "effective_to": null,
+    "region": "US",
+    "applies_by": "event_date",
+    "source_path": "knowledge/lost-parcel-v2.md",
+    "parameters": {
+      "investigation_after_overdue_days": 3
+    }
+  },
+  {
+    "policy_id": "delivered-not-received-v1",
+    "topic": "delivered-not-received",
+    "version": "v1",
+    "effective_from": "2026-01-01",
+    "effective_to": "2026-09-15",
+    "region": "US",
+    "applies_by": "event_date",
+    "source_path": "knowledge/delivered-not-received-v1.md",
+    "parameters": {
+      "report_window_days": 7
+    }
+  },
+  {
+    "policy_id": "delivered-not-received-v2",
+    "topic": "delivered-not-received",
+    "version": "v2",
+    "effective_from": "2026-09-15",
+    "effective_to": null,
+    "region": "US",
+    "applies_by": "event_date",
+    "source_path": "knowledge/delivered-not-received-v2.md",
+    "parameters": {
+      "report_window_days": 14
+    }
+  },
+  {
+    "policy_id": "cancellation-v1",
+    "topic": "cancellation",
+    "version": "v1",
+    "effective_from": "2026-01-01",
+    "effective_to": "2026-09-15",
+    "region": "US",
+    "applies_by": "event_date",
+    "source_path": "knowledge/cancellation-v1.md",
+    "parameters": {}
+  },
+  {
+    "policy_id": "cancellation-v2",
+    "topic": "cancellation",
+    "version": "v2",
+    "effective_from": "2026-09-15",
+    "effective_to": null,
+    "region": "US",
+    "applies_by": "event_date",
+    "source_path": "knowledge/cancellation-v2.md",
+    "parameters": {}
+  },
+  {
+    "policy_id": "return-confirmation-v1",
+    "topic": "return-confirmation",
+    "version": "v1",
+    "effective_from": "2026-01-01",
+    "effective_to": "2026-09-15",
+    "region": "US",
+    "applies_by": "event_date",
+    "source_path": "knowledge/return-confirmation-v1.md",
+    "parameters": {}
+  },
+  {
+    "policy_id": "return-confirmation-v2",
+    "topic": "return-confirmation",
+    "version": "v2",
+    "effective_from": "2026-09-15",
+    "effective_to": null,
+    "region": "US",
+    "applies_by": "event_date",
+    "source_path": "knowledge/return-confirmation-v2.md",
+    "parameters": {}
+  },
+  {
+    "policy_id": "identity-access-v1",
+    "topic": "identity-access",
+    "version": "v1",
+    "effective_from": "2026-01-01",
+    "effective_to": "2026-09-15",
+    "region": "US",
+    "applies_by": "event_date",
+    "source_path": "knowledge/identity-access-v1.md",
+    "parameters": {}
+  },
+  {
+    "policy_id": "identity-access-v2",
+    "topic": "identity-access",
+    "version": "v2",
+    "effective_from": "2026-09-15",
+    "effective_to": null,
+    "region": "US",
+    "applies_by": "event_date",
+    "source_path": "knowledge/identity-access-v2.md",
+    "parameters": {}
+  },
+  {
+    "policy_id": "payment-data-v1",
+    "topic": "payment-data",
+    "version": "v1",
+    "effective_from": "2026-01-01",
+    "effective_to": "2026-09-15",
+    "region": "US",
+    "applies_by": "event_date",
+    "source_path": "knowledge/payment-data-v1.md",
+    "parameters": {}
+  },
+  {
+    "policy_id": "payment-data-v2",
+    "topic": "payment-data",
+    "version": "v2",
+    "effective_from": "2026-09-15",
+    "effective_to": null,
+    "region": "US",
+    "applies_by": "event_date",
+    "source_path": "knowledge/payment-data-v2.md",
+    "parameters": {}
+  },
+  {
+    "policy_id": "policy-versioning-v1",
+    "topic": "policy-versioning",
+    "version": "v1",
+    "effective_from": "2026-01-01",
+    "effective_to": "2026-09-15",
+    "region": "US",
+    "applies_by": "event_date",
+    "source_path": "knowledge/policy-versioning-v1.md",
+    "parameters": {}
+  },
+  {
+    "policy_id": "policy-versioning-v2",
+    "topic": "policy-versioning",
+    "version": "v2",
+    "effective_from": "2026-09-15",
+    "effective_to": null,
+    "region": "US",
+    "applies_by": "event_date",
+    "source_path": "knowledge/policy-versioning-v2.md",
+    "parameters": {}
+  },
+  {
+    "policy_id": "support-escalation-v1",
+    "topic": "support-escalation",
+    "version": "v1",
+    "effective_from": "2026-01-01",
+    "effective_to": "2026-09-15",
+    "region": "US",
+    "applies_by": "event_date",
+    "source_path": "knowledge/support-escalation-v1.md",
+    "parameters": {
+      "response_business_days": 3
+    }
+  },
+  {
+    "policy_id": "support-escalation-v2",
+    "topic": "support-escalation",
+    "version": "v2",
+    "effective_from": "2026-09-15",
+    "effective_to": null,
+    "region": "US",
+    "applies_by": "event_date",
+    "source_path": "knowledge/support-escalation-v2.md",
+    "parameters": {
+      "response_business_days": 2
+    }
+  }
+]

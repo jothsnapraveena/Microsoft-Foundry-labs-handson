@@ -1,0 +1,7 @@
+# Tool service (stage 2). Versions pinned to the set the tests were run against.
+fastapi==0.142.2
+uvicorn==0.54.0
+pydantic==2.13.5
+PyJWT[crypto]==2.15.1
+# Test client for the HTTP tests.
+httpx2==2.13.1

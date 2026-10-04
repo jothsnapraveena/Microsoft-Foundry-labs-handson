@@ -1,0 +1,39 @@
+{
+  "description": "Instrumentation contract, not observed production telemetry",
+  "fields": [
+    "trace_id",
+    "session_id",
+    "customer_pseudonym",
+    "case_id",
+    "model_deployment",
+    "prompt_version",
+    "retrieval_latency_ms",
+    "retrieved_chunk_ids",
+    "policy_versions",
+    "tool_name",
+    "tool_latency_ms",
+    "tool_status",
+    "input_tokens",
+    "output_tokens",
+    "estimated_cost_usd",
+    "decision",
+    "confirmation_id",
+    "action_id",
+    "error_type"
+  ],
+  "redact": [
+    "raw_customer_email",
+    "authentication_tokens",
+    "payment_details"
+  ],
+  "audit_fields": [
+    "actor_id",
+    "order_id",
+    "action",
+    "policy_ids",
+    "confirmation_id",
+    "idempotency_key_hash",
+    "result",
+    "timestamp"
+  ]
+}

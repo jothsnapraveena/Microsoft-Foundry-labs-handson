@@ -1,0 +1,4647 @@
+[
+  {
+    "case_id": "EVAL-001",
+    "split": "development",
+    "scenario": "electronics-v1-day-13",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-188",
+    "question": "I'd like to return 1 of item ORD-0588-ITEM-1 from order ORD-0588 because I changed my mind. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0588",
+      "item_id": "ORD-0588-ITEM-1",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "eligible",
+    "expected_policy_ids": [
+      "electronics-returns-v1",
+      "return-shipping-v1"
+    ],
+    "expected_fee_cents": 700,
+    "version_sensitive": true,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-002",
+    "split": "development",
+    "scenario": "electronics-v1-day-13",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-160",
+    "question": "I'd like to return 1 of item ORD-0560-ITEM-1 from order ORD-0560 because I changed my mind. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0560",
+      "item_id": "ORD-0560-ITEM-1",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "eligible",
+    "expected_policy_ids": [
+      "electronics-returns-v1",
+      "return-shipping-v1"
+    ],
+    "expected_fee_cents": 700,
+    "version_sensitive": true,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-003",
+    "split": "development",
+    "scenario": "electronics-v1-day-13",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-153",
+    "question": "I'd like to return 1 of item ORD-0553-ITEM-2 from order ORD-0553 because I changed my mind. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0553",
+      "item_id": "ORD-0553-ITEM-2",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "eligible",
+    "expected_policy_ids": [
+      "electronics-returns-v1",
+      "return-shipping-v1"
+    ],
+    "expected_fee_cents": 700,
+    "version_sensitive": true,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-004",
+    "split": "development",
+    "scenario": "electronics-v1-day-14",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-061",
+    "question": "I'd like to return 1 of item ORD-0461-ITEM-1 from order ORD-0461 because I changed my mind. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0461",
+      "item_id": "ORD-0461-ITEM-1",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "eligible",
+    "expected_policy_ids": [
+      "electronics-returns-v1",
+      "return-shipping-v1"
+    ],
+    "expected_fee_cents": 700,
+    "version_sensitive": true,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-005",
+    "split": "test",
+    "scenario": "electronics-v1-day-14",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-003",
+    "question": "I'd like to return 1 of item ORD-0003-ITEM-2 from order ORD-0003 because I changed my mind. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0003",
+      "item_id": "ORD-0003-ITEM-2",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "eligible",
+    "expected_policy_ids": [
+      "electronics-returns-v1",
+      "return-shipping-v1"
+    ],
+    "expected_fee_cents": 700,
+    "version_sensitive": true,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-006",
+    "split": "development",
+    "scenario": "electronics-v1-day-14",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-195",
+    "question": "I'd like to return 1 of item ORD-0595-ITEM-2 from order ORD-0595 because I changed my mind. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0595",
+      "item_id": "ORD-0595-ITEM-2",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "eligible",
+    "expected_policy_ids": [
+      "electronics-returns-v1",
+      "return-shipping-v1"
+    ],
+    "expected_fee_cents": 700,
+    "version_sensitive": true,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-007",
+    "split": "development",
+    "scenario": "electronics-v1-day-15",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-096",
+    "question": "I'd like to return 1 of item ORD-0296-ITEM-2 from order ORD-0296 because I changed my mind. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0296",
+      "item_id": "ORD-0296-ITEM-2",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "ineligible",
+    "expected_policy_ids": [
+      "electronics-returns-v1"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": true,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-008",
+    "split": "development",
+    "scenario": "electronics-v1-day-15",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-041",
+    "question": "I'd like to return 1 of item ORD-0241-ITEM-2 from order ORD-0241 because I changed my mind. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0241",
+      "item_id": "ORD-0241-ITEM-2",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "ineligible",
+    "expected_policy_ids": [
+      "electronics-returns-v1"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": true,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-009",
+    "split": "development",
+    "scenario": "electronics-v1-day-15",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-022",
+    "question": "I'd like to return 1 of item ORD-0222-ITEM-2 from order ORD-0222 because I changed my mind. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0222",
+      "item_id": "ORD-0222-ITEM-2",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "ineligible",
+    "expected_policy_ids": [
+      "electronics-returns-v1"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": true,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-010",
+    "split": "development",
+    "scenario": "electronics-v1-day-16",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-009",
+    "question": "I'd like to return 1 of item ORD-0809-ITEM-2 from order ORD-0809 because I changed my mind. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0809",
+      "item_id": "ORD-0809-ITEM-2",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "ineligible",
+    "expected_policy_ids": [
+      "electronics-returns-v1"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-011",
+    "split": "test",
+    "scenario": "electronics-v1-day-16",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-140",
+    "question": "I'd like to return 1 of item ORD-0340-ITEM-2 from order ORD-0340 because I changed my mind. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0340",
+      "item_id": "ORD-0340-ITEM-2",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "ineligible",
+    "expected_policy_ids": [
+      "electronics-returns-v1"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-012",
+    "split": "development",
+    "scenario": "electronics-v1-day-16",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-108",
+    "question": "I'd like to return 1 of item ORD-0708-ITEM-1 from order ORD-0708 because I changed my mind. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0708",
+      "item_id": "ORD-0708-ITEM-1",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "ineligible",
+    "expected_policy_ids": [
+      "electronics-returns-v1"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-013",
+    "split": "development",
+    "scenario": "electronics-v2-day-13",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-146",
+    "question": "I'd like to return 1 of item ORD-0746-ITEM-2 from order ORD-0746 because I changed my mind. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0746",
+      "item_id": "ORD-0746-ITEM-2",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "eligible",
+    "expected_policy_ids": [
+      "electronics-returns-v2",
+      "return-shipping-v2"
+    ],
+    "expected_fee_cents": 500,
+    "version_sensitive": true,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-014",
+    "split": "development",
+    "scenario": "electronics-v2-day-13",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-141",
+    "question": "I'd like to return 1 of item ORD-0341-ITEM-2 from order ORD-0341 because I changed my mind. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0341",
+      "item_id": "ORD-0341-ITEM-2",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "eligible",
+    "expected_policy_ids": [
+      "electronics-returns-v2",
+      "return-shipping-v2"
+    ],
+    "expected_fee_cents": 500,
+    "version_sensitive": true,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-015",
+    "split": "development",
+    "scenario": "electronics-v2-day-13",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-117",
+    "question": "I'd like to return 1 of item ORD-0117-ITEM-1 from order ORD-0117 because I changed my mind. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0117",
+      "item_id": "ORD-0117-ITEM-1",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "eligible",
+    "expected_policy_ids": [
+      "electronics-returns-v2",
+      "return-shipping-v2"
+    ],
+    "expected_fee_cents": 500,
+    "version_sensitive": true,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-016",
+    "split": "test",
+    "scenario": "electronics-v2-day-14",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-109",
+    "question": "I'd like to return 1 of item ORD-0309-ITEM-1 from order ORD-0309 because I changed my mind. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0309",
+      "item_id": "ORD-0309-ITEM-1",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "eligible",
+    "expected_policy_ids": [
+      "electronics-returns-v2",
+      "return-shipping-v2"
+    ],
+    "expected_fee_cents": 500,
+    "version_sensitive": true,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-017",
+    "split": "development",
+    "scenario": "electronics-v2-day-14",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-038",
+    "question": "I'd like to return 1 of item ORD-0438-ITEM-2 from order ORD-0438 because I changed my mind. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0438",
+      "item_id": "ORD-0438-ITEM-2",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "eligible",
+    "expected_policy_ids": [
+      "electronics-returns-v2",
+      "return-shipping-v2"
+    ],
+    "expected_fee_cents": 500,
+    "version_sensitive": true,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-018",
+    "split": "development",
+    "scenario": "electronics-v2-day-14",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-109",
+    "question": "I'd like to return 1 of item ORD-0909-ITEM-1 from order ORD-0909 because I changed my mind. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0909",
+      "item_id": "ORD-0909-ITEM-1",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "eligible",
+    "expected_policy_ids": [
+      "electronics-returns-v2",
+      "return-shipping-v2"
+    ],
+    "expected_fee_cents": 500,
+    "version_sensitive": true,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-019",
+    "split": "development",
+    "scenario": "electronics-v2-day-15",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-133",
+    "question": "I'd like to return 1 of item ORD-0133-ITEM-2 from order ORD-0133 because I changed my mind. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0133",
+      "item_id": "ORD-0133-ITEM-2",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "eligible",
+    "expected_policy_ids": [
+      "electronics-returns-v2",
+      "return-shipping-v2"
+    ],
+    "expected_fee_cents": 500,
+    "version_sensitive": true,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-020",
+    "split": "development",
+    "scenario": "electronics-v2-day-15",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-015",
+    "question": "I'd like to return 1 of item ORD-0415-ITEM-1 from order ORD-0415 because I changed my mind. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0415",
+      "item_id": "ORD-0415-ITEM-1",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "eligible",
+    "expected_policy_ids": [
+      "electronics-returns-v2",
+      "return-shipping-v2"
+    ],
+    "expected_fee_cents": 500,
+    "version_sensitive": true,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-021",
+    "split": "test",
+    "scenario": "electronics-v2-day-15",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-093",
+    "question": "I'd like to return 1 of item ORD-0293-ITEM-2 from order ORD-0293 because I changed my mind. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0293",
+      "item_id": "ORD-0293-ITEM-2",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "eligible",
+    "expected_policy_ids": [
+      "electronics-returns-v2",
+      "return-shipping-v2"
+    ],
+    "expected_fee_cents": 500,
+    "version_sensitive": true,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-022",
+    "split": "development",
+    "scenario": "electronics-v2-day-16",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-035",
+    "question": "I'd like to return 1 of item ORD-0035-ITEM-1 from order ORD-0035 because I changed my mind. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0035",
+      "item_id": "ORD-0035-ITEM-1",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "ineligible",
+    "expected_policy_ids": [
+      "electronics-returns-v2"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-023",
+    "split": "development",
+    "scenario": "electronics-early",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-189",
+    "question": "I'd like to return 1 of item ORD-0389-ITEM-2 from order ORD-0389 because I changed my mind. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0389",
+      "item_id": "ORD-0389-ITEM-2",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "eligible",
+    "expected_policy_ids": [
+      "electronics-returns-v2",
+      "return-shipping-v2"
+    ],
+    "expected_fee_cents": 500,
+    "version_sensitive": true,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-024",
+    "split": "development",
+    "scenario": "electronics-early",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-190",
+    "question": "I'd like to return 1 of item ORD-0990-ITEM-2 from order ORD-0990 because I changed my mind. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0990",
+      "item_id": "ORD-0990-ITEM-2",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "eligible",
+    "expected_policy_ids": [
+      "electronics-returns-v2",
+      "return-shipping-v2"
+    ],
+    "expected_fee_cents": 500,
+    "version_sensitive": true,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-025",
+    "split": "development",
+    "scenario": "electronics-early",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-190",
+    "question": "I'd like to return 1 of item ORD-0390-ITEM-2 from order ORD-0390 because I changed my mind. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0390",
+      "item_id": "ORD-0390-ITEM-2",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "eligible",
+    "expected_policy_ids": [
+      "electronics-returns-v2",
+      "return-shipping-v2"
+    ],
+    "expected_fee_cents": 500,
+    "version_sensitive": true,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-026",
+    "split": "development",
+    "scenario": "electronics-early",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-130",
+    "question": "I'd like to return 1 of item ORD-0530-ITEM-1 from order ORD-0530 because I changed my mind. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0530",
+      "item_id": "ORD-0530-ITEM-1",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "eligible",
+    "expected_policy_ids": [
+      "electronics-returns-v2",
+      "return-shipping-v2"
+    ],
+    "expected_fee_cents": 500,
+    "version_sensitive": true,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-027",
+    "split": "test",
+    "scenario": "electronics-sealed",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-042",
+    "question": "I'd like to return 1 of item ORD-0442-ITEM-1 from order ORD-0442 because I changed my mind. Condition: unused. All accessories included: yes. Original packaging: yes.",
+    "inputs": {
+      "order_id": "ORD-0442",
+      "item_id": "ORD-0442-ITEM-1",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "unused",
+      "accessories_present": true,
+      "original_packaging": true
+    },
+    "expected_outcome": "eligible",
+    "expected_policy_ids": [
+      "electronics-returns-v2",
+      "return-shipping-v2"
+    ],
+    "expected_fee_cents": 500,
+    "version_sensitive": true,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-028",
+    "split": "development",
+    "scenario": "electronics-sealed",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-160",
+    "question": "I'd like to return 1 of item ORD-0760-ITEM-2 from order ORD-0760 because I changed my mind. Condition: unused. All accessories included: yes. Original packaging: yes.",
+    "inputs": {
+      "order_id": "ORD-0760",
+      "item_id": "ORD-0760-ITEM-2",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "unused",
+      "accessories_present": true,
+      "original_packaging": true
+    },
+    "expected_outcome": "eligible",
+    "expected_policy_ids": [
+      "electronics-returns-v2",
+      "return-shipping-v2"
+    ],
+    "expected_fee_cents": 500,
+    "version_sensitive": true,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-029",
+    "split": "development",
+    "scenario": "electronics-sealed",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-021",
+    "question": "I'd like to return 1 of item ORD-0221-ITEM-1 from order ORD-0221 because I changed my mind. Condition: unused. All accessories included: yes. Original packaging: yes.",
+    "inputs": {
+      "order_id": "ORD-0221",
+      "item_id": "ORD-0221-ITEM-1",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "unused",
+      "accessories_present": true,
+      "original_packaging": true
+    },
+    "expected_outcome": "eligible",
+    "expected_policy_ids": [
+      "electronics-returns-v2",
+      "return-shipping-v2"
+    ],
+    "expected_fee_cents": 500,
+    "version_sensitive": true,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-030",
+    "split": "development",
+    "scenario": "electronics-damaged",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-105",
+    "question": "I'd like to return 1 of item ORD-0305-ITEM-1 from order ORD-0305 because I changed my mind. Condition: damaged. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0305",
+      "item_id": "ORD-0305-ITEM-1",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "damaged",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "ineligible",
+    "expected_policy_ids": [
+      "electronics-returns-v2"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-031",
+    "split": "development",
+    "scenario": "electronics-damaged",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-178",
+    "question": "I'd like to return 1 of item ORD-0178-ITEM-1 from order ORD-0178 because I changed my mind. Condition: damaged. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0178",
+      "item_id": "ORD-0178-ITEM-1",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "damaged",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "ineligible",
+    "expected_policy_ids": [
+      "electronics-returns-v2"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-032",
+    "split": "test",
+    "scenario": "electronics-damaged",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-011",
+    "question": "I'd like to return 1 of item ORD-0811-ITEM-2 from order ORD-0811 because I changed my mind. Condition: damaged. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0811",
+      "item_id": "ORD-0811-ITEM-2",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "damaged",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "ineligible",
+    "expected_policy_ids": [
+      "electronics-returns-v2"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-033",
+    "split": "development",
+    "scenario": "electronics-damaged",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-051",
+    "question": "I'd like to return 1 of item ORD-0051-ITEM-2 from order ORD-0051 because I changed my mind. Condition: damaged. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0051",
+      "item_id": "ORD-0051-ITEM-2",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "damaged",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "ineligible",
+    "expected_policy_ids": [
+      "electronics-returns-v2"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-034",
+    "split": "development",
+    "scenario": "electronics-missing-accessories",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-057",
+    "question": "I'd like to return 1 of item ORD-0657-ITEM-2 from order ORD-0657 because I changed my mind. Condition: opened. All accessories included: no. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0657",
+      "item_id": "ORD-0657-ITEM-2",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "opened",
+      "accessories_present": false,
+      "original_packaging": false
+    },
+    "expected_outcome": "ineligible",
+    "expected_policy_ids": [
+      "electronics-returns-v2"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-035",
+    "split": "development",
+    "scenario": "electronics-missing-accessories",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-086",
+    "question": "I'd like to return 1 of item ORD-0886-ITEM-2 from order ORD-0886 because I changed my mind. Condition: opened. All accessories included: no. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0886",
+      "item_id": "ORD-0886-ITEM-2",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "opened",
+      "accessories_present": false,
+      "original_packaging": false
+    },
+    "expected_outcome": "ineligible",
+    "expected_policy_ids": [
+      "electronics-returns-v2"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-036",
+    "split": "development",
+    "scenario": "electronics-missing-accessories",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-104",
+    "question": "I'd like to return 1 of item ORD-0304-ITEM-2 from order ORD-0304 because I changed my mind. Condition: opened. All accessories included: no. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0304",
+      "item_id": "ORD-0304-ITEM-2",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "opened",
+      "accessories_present": false,
+      "original_packaging": false
+    },
+    "expected_outcome": "ineligible",
+    "expected_policy_ids": [
+      "electronics-returns-v2"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-037",
+    "split": "test",
+    "scenario": "electronics-missing-accessories",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-165",
+    "question": "I'd like to return 1 of item ORD-0565-ITEM-1 from order ORD-0565 because I changed my mind. Condition: opened. All accessories included: no. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0565",
+      "item_id": "ORD-0565-ITEM-1",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "opened",
+      "accessories_present": false,
+      "original_packaging": false
+    },
+    "expected_outcome": "ineligible",
+    "expected_policy_ids": [
+      "electronics-returns-v2"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-038",
+    "split": "development",
+    "scenario": "standard-day-29",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-083",
+    "question": "I'd like to return 1 of item ORD-0483-ITEM-2 from order ORD-0483 because I changed my mind. Condition: unused. All accessories included: yes. Original packaging: yes.",
+    "inputs": {
+      "order_id": "ORD-0483",
+      "item_id": "ORD-0483-ITEM-2",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "unused",
+      "accessories_present": true,
+      "original_packaging": true
+    },
+    "expected_outcome": "eligible",
+    "expected_policy_ids": [
+      "standard-returns-v1",
+      "return-shipping-v1"
+    ],
+    "expected_fee_cents": 700,
+    "version_sensitive": true,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-039",
+    "split": "development",
+    "scenario": "standard-day-29",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-135",
+    "question": "I'd like to return 1 of item ORD-0135-ITEM-2 from order ORD-0135 because I changed my mind. Condition: unused. All accessories included: yes. Original packaging: yes.",
+    "inputs": {
+      "order_id": "ORD-0135",
+      "item_id": "ORD-0135-ITEM-2",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "unused",
+      "accessories_present": true,
+      "original_packaging": true
+    },
+    "expected_outcome": "eligible",
+    "expected_policy_ids": [
+      "standard-returns-v1",
+      "return-shipping-v1"
+    ],
+    "expected_fee_cents": 700,
+    "version_sensitive": true,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-040",
+    "split": "test",
+    "scenario": "standard-day-29",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-155",
+    "question": "I'd like to return 1 of item ORD-0755-ITEM-1 from order ORD-0755 because I changed my mind. Condition: unused. All accessories included: yes. Original packaging: yes.",
+    "inputs": {
+      "order_id": "ORD-0755",
+      "item_id": "ORD-0755-ITEM-1",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "unused",
+      "accessories_present": true,
+      "original_packaging": true
+    },
+    "expected_outcome": "eligible",
+    "expected_policy_ids": [
+      "standard-returns-v1",
+      "return-shipping-v1"
+    ],
+    "expected_fee_cents": 700,
+    "version_sensitive": true,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-041",
+    "split": "development",
+    "scenario": "defective-day-29",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-163",
+    "question": "I'd like to return 1 of item ORD-0563-ITEM-2 from order ORD-0563 because it is defective. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0563",
+      "item_id": "ORD-0563-ITEM-2",
+      "quantity": 1,
+      "reason": "defective",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "eligible",
+    "expected_policy_ids": [
+      "defective-items-v1",
+      "return-shipping-v1"
+    ],
+    "expected_fee_cents": 0,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-042",
+    "split": "development",
+    "scenario": "defective-day-29",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-082",
+    "question": "I'd like to return 1 of item ORD-0682-ITEM-2 from order ORD-0682 because it is defective. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0682",
+      "item_id": "ORD-0682-ITEM-2",
+      "quantity": 1,
+      "reason": "defective",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "eligible",
+    "expected_policy_ids": [
+      "defective-items-v1",
+      "return-shipping-v1"
+    ],
+    "expected_fee_cents": 0,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-043",
+    "split": "development",
+    "scenario": "defective-day-29",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-041",
+    "question": "I'd like to return 1 of item ORD-0641-ITEM-2 from order ORD-0641 because it is defective. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0641",
+      "item_id": "ORD-0641-ITEM-2",
+      "quantity": 1,
+      "reason": "defective",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "eligible",
+    "expected_policy_ids": [
+      "defective-items-v1",
+      "return-shipping-v1"
+    ],
+    "expected_fee_cents": 0,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-044",
+    "split": "development",
+    "scenario": "standard-day-30",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-019",
+    "question": "I'd like to return 1 of item ORD-0019-ITEM-1 from order ORD-0019 because I changed my mind. Condition: unused. All accessories included: yes. Original packaging: yes.",
+    "inputs": {
+      "order_id": "ORD-0019",
+      "item_id": "ORD-0019-ITEM-1",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "unused",
+      "accessories_present": true,
+      "original_packaging": true
+    },
+    "expected_outcome": "eligible",
+    "expected_policy_ids": [
+      "standard-returns-v1",
+      "return-shipping-v1"
+    ],
+    "expected_fee_cents": 700,
+    "version_sensitive": true,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-045",
+    "split": "test",
+    "scenario": "standard-day-30",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-189",
+    "question": "I'd like to return 1 of item ORD-0789-ITEM-1 from order ORD-0789 because I changed my mind. Condition: unused. All accessories included: yes. Original packaging: yes.",
+    "inputs": {
+      "order_id": "ORD-0789",
+      "item_id": "ORD-0789-ITEM-1",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "unused",
+      "accessories_present": true,
+      "original_packaging": true
+    },
+    "expected_outcome": "eligible",
+    "expected_policy_ids": [
+      "standard-returns-v1",
+      "return-shipping-v1"
+    ],
+    "expected_fee_cents": 700,
+    "version_sensitive": true,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-046",
+    "split": "development",
+    "scenario": "standard-day-30",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-188",
+    "question": "I'd like to return 1 of item ORD-0988-ITEM-2 from order ORD-0988 because I changed my mind. Condition: unused. All accessories included: yes. Original packaging: yes.",
+    "inputs": {
+      "order_id": "ORD-0988",
+      "item_id": "ORD-0988-ITEM-2",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "unused",
+      "accessories_present": true,
+      "original_packaging": true
+    },
+    "expected_outcome": "eligible",
+    "expected_policy_ids": [
+      "standard-returns-v1",
+      "return-shipping-v1"
+    ],
+    "expected_fee_cents": 700,
+    "version_sensitive": true,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-047",
+    "split": "development",
+    "scenario": "defective-day-30",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-019",
+    "question": "I'd like to return 1 of item ORD-0019-ITEM-2 from order ORD-0019 because it is defective. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0019",
+      "item_id": "ORD-0019-ITEM-2",
+      "quantity": 1,
+      "reason": "defective",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "eligible",
+    "expected_policy_ids": [
+      "defective-items-v1",
+      "return-shipping-v1"
+    ],
+    "expected_fee_cents": 0,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-048",
+    "split": "development",
+    "scenario": "defective-day-30",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-156",
+    "question": "I'd like to return 1 of item ORD-0756-ITEM-2 from order ORD-0756 because it is defective. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0756",
+      "item_id": "ORD-0756-ITEM-2",
+      "quantity": 1,
+      "reason": "defective",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "eligible",
+    "expected_policy_ids": [
+      "defective-items-v1",
+      "return-shipping-v1"
+    ],
+    "expected_fee_cents": 0,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-049",
+    "split": "development",
+    "scenario": "defective-day-30",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-138",
+    "question": "I'd like to return 1 of item ORD-0738-ITEM-2 from order ORD-0738 because it is defective. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0738",
+      "item_id": "ORD-0738-ITEM-2",
+      "quantity": 1,
+      "reason": "defective",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "eligible",
+    "expected_policy_ids": [
+      "defective-items-v1",
+      "return-shipping-v1"
+    ],
+    "expected_fee_cents": 0,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-050",
+    "split": "development",
+    "scenario": "standard-day-31",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-077",
+    "question": "I'd like to return 1 of item ORD-0677-ITEM-1 from order ORD-0677 because I changed my mind. Condition: unused. All accessories included: yes. Original packaging: yes.",
+    "inputs": {
+      "order_id": "ORD-0677",
+      "item_id": "ORD-0677-ITEM-1",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "unused",
+      "accessories_present": true,
+      "original_packaging": true
+    },
+    "expected_outcome": "ineligible",
+    "expected_policy_ids": [
+      "standard-returns-v1"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-051",
+    "split": "development",
+    "scenario": "standard-day-31",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-174",
+    "question": "I'd like to return 1 of item ORD-0574-ITEM-1 from order ORD-0574 because I changed my mind. Condition: unused. All accessories included: yes. Original packaging: yes.",
+    "inputs": {
+      "order_id": "ORD-0574",
+      "item_id": "ORD-0574-ITEM-1",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "unused",
+      "accessories_present": true,
+      "original_packaging": true
+    },
+    "expected_outcome": "ineligible",
+    "expected_policy_ids": [
+      "standard-returns-v1"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-052",
+    "split": "development",
+    "scenario": "standard-day-31",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-005",
+    "question": "I'd like to return 1 of item ORD-0605-ITEM-2 from order ORD-0605 because I changed my mind. Condition: unused. All accessories included: yes. Original packaging: yes.",
+    "inputs": {
+      "order_id": "ORD-0605",
+      "item_id": "ORD-0605-ITEM-2",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "unused",
+      "accessories_present": true,
+      "original_packaging": true
+    },
+    "expected_outcome": "ineligible",
+    "expected_policy_ids": [
+      "standard-returns-v1"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-053",
+    "split": "development",
+    "scenario": "defective-day-31",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-168",
+    "question": "I'd like to return 1 of item ORD-0768-ITEM-1 from order ORD-0768 because it is defective. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0768",
+      "item_id": "ORD-0768-ITEM-1",
+      "quantity": 1,
+      "reason": "defective",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "review_required",
+    "expected_policy_ids": [
+      "warranty-v1"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-054",
+    "split": "development",
+    "scenario": "defective-day-31",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-056",
+    "question": "I'd like to return 1 of item ORD-0856-ITEM-2 from order ORD-0856 because it is defective. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0856",
+      "item_id": "ORD-0856-ITEM-2",
+      "quantity": 1,
+      "reason": "defective",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "review_required",
+    "expected_policy_ids": [
+      "warranty-v1"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-055",
+    "split": "development",
+    "scenario": "defective-day-31",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-149",
+    "question": "I'd like to return 1 of item ORD-0949-ITEM-2 from order ORD-0949 because it is defective. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0949",
+      "item_id": "ORD-0949-ITEM-2",
+      "quantity": 1,
+      "reason": "defective",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "review_required",
+    "expected_policy_ids": [
+      "warranty-v1"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-056",
+    "split": "test",
+    "scenario": "standard-early",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-123",
+    "question": "I'd like to return 1 of item ORD-0723-ITEM-1 from order ORD-0723 because I changed my mind. Condition: unused. All accessories included: yes. Original packaging: yes.",
+    "inputs": {
+      "order_id": "ORD-0723",
+      "item_id": "ORD-0723-ITEM-1",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "unused",
+      "accessories_present": true,
+      "original_packaging": true
+    },
+    "expected_outcome": "eligible",
+    "expected_policy_ids": [
+      "standard-returns-v2",
+      "return-shipping-v2"
+    ],
+    "expected_fee_cents": 500,
+    "version_sensitive": true,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-057",
+    "split": "development",
+    "scenario": "standard-early",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-010",
+    "question": "I'd like to return 1 of item ORD-0810-ITEM-2 from order ORD-0810 because I changed my mind. Condition: unused. All accessories included: yes. Original packaging: yes.",
+    "inputs": {
+      "order_id": "ORD-0810",
+      "item_id": "ORD-0810-ITEM-2",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "unused",
+      "accessories_present": true,
+      "original_packaging": true
+    },
+    "expected_outcome": "eligible",
+    "expected_policy_ids": [
+      "standard-returns-v2",
+      "return-shipping-v2"
+    ],
+    "expected_fee_cents": 500,
+    "version_sensitive": true,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-058",
+    "split": "development",
+    "scenario": "standard-early",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-009",
+    "question": "I'd like to return 1 of item ORD-0809-ITEM-1 from order ORD-0809 because I changed my mind. Condition: unused. All accessories included: yes. Original packaging: yes.",
+    "inputs": {
+      "order_id": "ORD-0809",
+      "item_id": "ORD-0809-ITEM-1",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "unused",
+      "accessories_present": true,
+      "original_packaging": true
+    },
+    "expected_outcome": "eligible",
+    "expected_policy_ids": [
+      "standard-returns-v1",
+      "return-shipping-v1"
+    ],
+    "expected_fee_cents": 700,
+    "version_sensitive": true,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-059",
+    "split": "development",
+    "scenario": "standard-early",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-105",
+    "question": "I'd like to return 1 of item ORD-0305-ITEM-2 from order ORD-0305 because I changed my mind. Condition: unused. All accessories included: yes. Original packaging: yes.",
+    "inputs": {
+      "order_id": "ORD-0305",
+      "item_id": "ORD-0305-ITEM-2",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "unused",
+      "accessories_present": true,
+      "original_packaging": true
+    },
+    "expected_outcome": "eligible",
+    "expected_policy_ids": [
+      "standard-returns-v2",
+      "return-shipping-v2"
+    ],
+    "expected_fee_cents": 500,
+    "version_sensitive": true,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-060",
+    "split": "development",
+    "scenario": "standard-early",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-183",
+    "question": "I'd like to return 1 of item ORD-0783-ITEM-2 from order ORD-0783 because I changed my mind. Condition: unused. All accessories included: yes. Original packaging: yes.",
+    "inputs": {
+      "order_id": "ORD-0783",
+      "item_id": "ORD-0783-ITEM-2",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "unused",
+      "accessories_present": true,
+      "original_packaging": true
+    },
+    "expected_outcome": "eligible",
+    "expected_policy_ids": [
+      "standard-returns-v1",
+      "return-shipping-v1"
+    ],
+    "expected_fee_cents": 700,
+    "version_sensitive": true,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-061",
+    "split": "test",
+    "scenario": "standard-early",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-165",
+    "question": "I'd like to return 1 of item ORD-0565-ITEM-2 from order ORD-0565 because I changed my mind. Condition: unused. All accessories included: yes. Original packaging: yes.",
+    "inputs": {
+      "order_id": "ORD-0565",
+      "item_id": "ORD-0565-ITEM-2",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "unused",
+      "accessories_present": true,
+      "original_packaging": true
+    },
+    "expected_outcome": "eligible",
+    "expected_policy_ids": [
+      "standard-returns-v2",
+      "return-shipping-v2"
+    ],
+    "expected_fee_cents": 500,
+    "version_sensitive": true,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-062",
+    "split": "development",
+    "scenario": "standard-opened",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-042",
+    "question": "I'd like to return 1 of item ORD-0042-ITEM-2 from order ORD-0042 because I changed my mind. Condition: opened. All accessories included: yes. Original packaging: yes.",
+    "inputs": {
+      "order_id": "ORD-0042",
+      "item_id": "ORD-0042-ITEM-2",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": true
+    },
+    "expected_outcome": "ineligible",
+    "expected_policy_ids": [
+      "standard-returns-v2"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-063",
+    "split": "test",
+    "scenario": "standard-opened",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-142",
+    "question": "I'd like to return 1 of item ORD-0542-ITEM-1 from order ORD-0542 because I changed my mind. Condition: opened. All accessories included: yes. Original packaging: yes.",
+    "inputs": {
+      "order_id": "ORD-0542",
+      "item_id": "ORD-0542-ITEM-1",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": true
+    },
+    "expected_outcome": "ineligible",
+    "expected_policy_ids": [
+      "standard-returns-v2"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-064",
+    "split": "development",
+    "scenario": "standard-opened",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-077",
+    "question": "I'd like to return 1 of item ORD-0077-ITEM-2 from order ORD-0077 because I changed my mind. Condition: opened. All accessories included: yes. Original packaging: yes.",
+    "inputs": {
+      "order_id": "ORD-0077",
+      "item_id": "ORD-0077-ITEM-2",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": true
+    },
+    "expected_outcome": "ineligible",
+    "expected_policy_ids": [
+      "standard-returns-v1"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-065",
+    "split": "development",
+    "scenario": "standard-opened",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-059",
+    "question": "I'd like to return 1 of item ORD-0059-ITEM-1 from order ORD-0059 because I changed my mind. Condition: opened. All accessories included: yes. Original packaging: yes.",
+    "inputs": {
+      "order_id": "ORD-0059",
+      "item_id": "ORD-0059-ITEM-1",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": true
+    },
+    "expected_outcome": "ineligible",
+    "expected_policy_ids": [
+      "standard-returns-v2"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-066",
+    "split": "development",
+    "scenario": "standard-no-packaging",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-043",
+    "question": "I'd like to return 1 of item ORD-0243-ITEM-2 from order ORD-0243 because I changed my mind. Condition: unused. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0243",
+      "item_id": "ORD-0243-ITEM-2",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "unused",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "ineligible",
+    "expected_policy_ids": [
+      "standard-returns-v2"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-067",
+    "split": "development",
+    "scenario": "standard-no-packaging",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-191",
+    "question": "I'd like to return 1 of item ORD-0591-ITEM-1 from order ORD-0591 because I changed my mind. Condition: unused. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0591",
+      "item_id": "ORD-0591-ITEM-1",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "unused",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "ineligible",
+    "expected_policy_ids": [
+      "standard-returns-v1"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-068",
+    "split": "test",
+    "scenario": "standard-no-packaging",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-173",
+    "question": "I'd like to return 1 of item ORD-0973-ITEM-2 from order ORD-0973 because I changed my mind. Condition: unused. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0973",
+      "item_id": "ORD-0973-ITEM-2",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "unused",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "ineligible",
+    "expected_policy_ids": [
+      "standard-returns-v1"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-069",
+    "split": "development",
+    "scenario": "standard-no-packaging",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-010",
+    "question": "I'd like to return 1 of item ORD-0810-ITEM-1 from order ORD-0810 because I changed my mind. Condition: unused. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0810",
+      "item_id": "ORD-0810-ITEM-1",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "unused",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "ineligible",
+    "expected_policy_ids": [
+      "standard-returns-v2"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-070",
+    "split": "development",
+    "scenario": "standard-damaged",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-042",
+    "question": "I'd like to return 1 of item ORD-0442-ITEM-2 from order ORD-0442 because I changed my mind. Condition: damaged. All accessories included: yes. Original packaging: yes.",
+    "inputs": {
+      "order_id": "ORD-0442",
+      "item_id": "ORD-0442-ITEM-2",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "damaged",
+      "accessories_present": true,
+      "original_packaging": true
+    },
+    "expected_outcome": "ineligible",
+    "expected_policy_ids": [
+      "standard-returns-v2"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-071",
+    "split": "development",
+    "scenario": "standard-damaged",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-094",
+    "question": "I'd like to return 1 of item ORD-0894-ITEM-1 from order ORD-0894 because I changed my mind. Condition: damaged. All accessories included: yes. Original packaging: yes.",
+    "inputs": {
+      "order_id": "ORD-0894",
+      "item_id": "ORD-0894-ITEM-1",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "damaged",
+      "accessories_present": true,
+      "original_packaging": true
+    },
+    "expected_outcome": "ineligible",
+    "expected_policy_ids": [
+      "standard-returns-v2"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-072",
+    "split": "development",
+    "scenario": "standard-late",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-106",
+    "question": "I'd like to return 1 of item ORD-0506-ITEM-1 from order ORD-0506 because I changed my mind. Condition: unused. All accessories included: yes. Original packaging: yes.",
+    "inputs": {
+      "order_id": "ORD-0506",
+      "item_id": "ORD-0506-ITEM-1",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "unused",
+      "accessories_present": true,
+      "original_packaging": true
+    },
+    "expected_outcome": "ineligible",
+    "expected_policy_ids": [
+      "standard-returns-v1"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-073",
+    "split": "test",
+    "scenario": "standard-late",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-073",
+    "question": "I'd like to return 1 of item ORD-0273-ITEM-1 from order ORD-0273 because I changed my mind. Condition: unused. All accessories included: yes. Original packaging: yes.",
+    "inputs": {
+      "order_id": "ORD-0273",
+      "item_id": "ORD-0273-ITEM-1",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "unused",
+      "accessories_present": true,
+      "original_packaging": true
+    },
+    "expected_outcome": "ineligible",
+    "expected_policy_ids": [
+      "standard-returns-v1"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-074",
+    "split": "development",
+    "scenario": "standard-late",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-119",
+    "question": "I'd like to return 1 of item ORD-0519-ITEM-2 from order ORD-0519 because I changed my mind. Condition: unused. All accessories included: yes. Original packaging: yes.",
+    "inputs": {
+      "order_id": "ORD-0519",
+      "item_id": "ORD-0519-ITEM-2",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "unused",
+      "accessories_present": true,
+      "original_packaging": true
+    },
+    "expected_outcome": "ineligible",
+    "expected_policy_ids": [
+      "standard-returns-v1"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-075",
+    "split": "development",
+    "scenario": "defective-early",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-125",
+    "question": "I'd like to return 1 of item ORD-0525-ITEM-1 from order ORD-0525 because it is defective. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0525",
+      "item_id": "ORD-0525-ITEM-1",
+      "quantity": 1,
+      "reason": "defective",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "eligible",
+    "expected_policy_ids": [
+      "defective-items-v1",
+      "return-shipping-v1"
+    ],
+    "expected_fee_cents": 0,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-076",
+    "split": "development",
+    "scenario": "defective-early",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-177",
+    "question": "I'd like to return 1 of item ORD-0177-ITEM-2 from order ORD-0177 because it is defective. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0177",
+      "item_id": "ORD-0177-ITEM-2",
+      "quantity": 1,
+      "reason": "defective",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "eligible",
+    "expected_policy_ids": [
+      "defective-items-v1",
+      "return-shipping-v1"
+    ],
+    "expected_fee_cents": 0,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-077",
+    "split": "development",
+    "scenario": "defective-early",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-165",
+    "question": "I'd like to return 1 of item ORD-0365-ITEM-2 from order ORD-0365 because it is defective. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0365",
+      "item_id": "ORD-0365-ITEM-2",
+      "quantity": 1,
+      "reason": "defective",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "eligible",
+    "expected_policy_ids": [
+      "defective-items-v2",
+      "return-shipping-v2"
+    ],
+    "expected_fee_cents": 0,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-078",
+    "split": "development",
+    "scenario": "defective-early",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-113",
+    "question": "I'd like to return 1 of item ORD-0113-ITEM-1 from order ORD-0113 because it is defective. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0113",
+      "item_id": "ORD-0113-ITEM-1",
+      "quantity": 1,
+      "reason": "defective",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "eligible",
+    "expected_policy_ids": [
+      "defective-items-v1",
+      "return-shipping-v1"
+    ],
+    "expected_fee_cents": 0,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-079",
+    "split": "test",
+    "scenario": "defective-early",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-029",
+    "question": "I'd like to return 1 of item ORD-0229-ITEM-2 from order ORD-0229 because it is defective. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0229",
+      "item_id": "ORD-0229-ITEM-2",
+      "quantity": 1,
+      "reason": "defective",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "eligible",
+    "expected_policy_ids": [
+      "defective-items-v2",
+      "return-shipping-v2"
+    ],
+    "expected_fee_cents": 0,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-080",
+    "split": "development",
+    "scenario": "defective-early",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-110",
+    "question": "I'd like to return 1 of item ORD-0510-ITEM-2 from order ORD-0510 because it is defective. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0510",
+      "item_id": "ORD-0510-ITEM-2",
+      "quantity": 1,
+      "reason": "defective",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "eligible",
+    "expected_policy_ids": [
+      "defective-items-v2",
+      "return-shipping-v2"
+    ],
+    "expected_fee_cents": 0,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-081",
+    "split": "development",
+    "scenario": "defective-late-warranty",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-196",
+    "question": "I'd like to return 1 of item ORD-0796-ITEM-2 from order ORD-0796 because it is defective. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0796",
+      "item_id": "ORD-0796-ITEM-2",
+      "quantity": 1,
+      "reason": "defective",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "review_required",
+    "expected_policy_ids": [
+      "warranty-v1"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-082",
+    "split": "test",
+    "scenario": "defective-late-warranty",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-151",
+    "question": "I'd like to return 1 of item ORD-0551-ITEM-2 from order ORD-0551 because it is defective. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0551",
+      "item_id": "ORD-0551-ITEM-2",
+      "quantity": 1,
+      "reason": "defective",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "review_required",
+    "expected_policy_ids": [
+      "warranty-v1"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-083",
+    "split": "development",
+    "scenario": "defective-late-warranty",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-037",
+    "question": "I'd like to return 1 of item ORD-0637-ITEM-2 from order ORD-0637 because it is defective. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0637",
+      "item_id": "ORD-0637-ITEM-2",
+      "quantity": 1,
+      "reason": "defective",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "review_required",
+    "expected_policy_ids": [
+      "warranty-v1"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-084",
+    "split": "development",
+    "scenario": "defective-late-warranty",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-142",
+    "question": "I'd like to return 1 of item ORD-0942-ITEM-2 from order ORD-0942 because it is defective. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0942",
+      "item_id": "ORD-0942-ITEM-2",
+      "quantity": 1,
+      "reason": "defective",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "review_required",
+    "expected_policy_ids": [
+      "warranty-v1"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-085",
+    "split": "development",
+    "scenario": "marketplace-change-of-mind",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-080",
+    "question": "I'd like to return 1 of item ORD-0680-ITEM-2 from order ORD-0680 because I changed my mind. Condition: unused. All accessories included: yes. Original packaging: yes.",
+    "inputs": {
+      "order_id": "ORD-0680",
+      "item_id": "ORD-0680-ITEM-2",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "unused",
+      "accessories_present": true,
+      "original_packaging": true
+    },
+    "expected_outcome": "review_required",
+    "expected_policy_ids": [
+      "marketplace-v1"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-086",
+    "split": "development",
+    "scenario": "marketplace-change-of-mind",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-102",
+    "question": "I'd like to return 1 of item ORD-0502-ITEM-2 from order ORD-0502 because I changed my mind. Condition: unused. All accessories included: yes. Original packaging: yes.",
+    "inputs": {
+      "order_id": "ORD-0502",
+      "item_id": "ORD-0502-ITEM-2",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "unused",
+      "accessories_present": true,
+      "original_packaging": true
+    },
+    "expected_outcome": "review_required",
+    "expected_policy_ids": [
+      "marketplace-v1"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-087",
+    "split": "test",
+    "scenario": "marketplace-change-of-mind",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-045",
+    "question": "I'd like to return 1 of item ORD-0445-ITEM-2 from order ORD-0445 because I changed my mind. Condition: unused. All accessories included: yes. Original packaging: yes.",
+    "inputs": {
+      "order_id": "ORD-0445",
+      "item_id": "ORD-0445-ITEM-2",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "unused",
+      "accessories_present": true,
+      "original_packaging": true
+    },
+    "expected_outcome": "review_required",
+    "expected_policy_ids": [
+      "marketplace-v2"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-088",
+    "split": "development",
+    "scenario": "marketplace-change-of-mind",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-100",
+    "question": "I'd like to return 1 of item ORD-0300-ITEM-1 from order ORD-0300 because I changed my mind. Condition: unused. All accessories included: yes. Original packaging: yes.",
+    "inputs": {
+      "order_id": "ORD-0300",
+      "item_id": "ORD-0300-ITEM-1",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "unused",
+      "accessories_present": true,
+      "original_packaging": true
+    },
+    "expected_outcome": "review_required",
+    "expected_policy_ids": [
+      "marketplace-v1"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-089",
+    "split": "development",
+    "scenario": "marketplace-defective",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-171",
+    "question": "I'd like to return 1 of item ORD-0971-ITEM-1 from order ORD-0971 because it is defective. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0971",
+      "item_id": "ORD-0971-ITEM-1",
+      "quantity": 1,
+      "reason": "defective",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "review_required",
+    "expected_policy_ids": [
+      "marketplace-v1"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-090",
+    "split": "development",
+    "scenario": "marketplace-defective",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-024",
+    "question": "I'd like to return 1 of item ORD-0824-ITEM-1 from order ORD-0824 because it is defective. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0824",
+      "item_id": "ORD-0824-ITEM-1",
+      "quantity": 1,
+      "reason": "defective",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "review_required",
+    "expected_policy_ids": [
+      "marketplace-v1"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-091",
+    "split": "development",
+    "scenario": "marketplace-defective",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-041",
+    "question": "I'd like to return 1 of item ORD-0841-ITEM-2 from order ORD-0841 because it is defective. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0841",
+      "item_id": "ORD-0841-ITEM-2",
+      "quantity": 1,
+      "reason": "defective",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "review_required",
+    "expected_policy_ids": [
+      "marketplace-v2"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-092",
+    "split": "test",
+    "scenario": "marketplace-defective",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-139",
+    "question": "I'd like to return 1 of item ORD-0339-ITEM-2 from order ORD-0339 because it is defective. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0339",
+      "item_id": "ORD-0339-ITEM-2",
+      "quantity": 1,
+      "reason": "defective",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "review_required",
+    "expected_policy_ids": [
+      "marketplace-v1"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-093",
+    "split": "development",
+    "scenario": "final-sale-change-of-mind",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-154",
+    "question": "I'd like to return 1 of item ORD-0954-ITEM-1 from order ORD-0954 because I changed my mind. Condition: unused. All accessories included: yes. Original packaging: yes.",
+    "inputs": {
+      "order_id": "ORD-0954",
+      "item_id": "ORD-0954-ITEM-1",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "unused",
+      "accessories_present": true,
+      "original_packaging": true
+    },
+    "expected_outcome": "ineligible",
+    "expected_policy_ids": [
+      "final-sale-v1"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-094",
+    "split": "development",
+    "scenario": "final-sale-change-of-mind",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-121",
+    "question": "I'd like to return 1 of item ORD-0121-ITEM-1 from order ORD-0121 because I changed my mind. Condition: unused. All accessories included: yes. Original packaging: yes.",
+    "inputs": {
+      "order_id": "ORD-0121",
+      "item_id": "ORD-0121-ITEM-1",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "unused",
+      "accessories_present": true,
+      "original_packaging": true
+    },
+    "expected_outcome": "ineligible",
+    "expected_policy_ids": [
+      "final-sale-v1"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-095",
+    "split": "development",
+    "scenario": "final-sale-change-of-mind",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-080",
+    "question": "I'd like to return 1 of item ORD-0480-ITEM-1 from order ORD-0480 because I changed my mind. Condition: unused. All accessories included: yes. Original packaging: yes.",
+    "inputs": {
+      "order_id": "ORD-0480",
+      "item_id": "ORD-0480-ITEM-1",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "unused",
+      "accessories_present": true,
+      "original_packaging": true
+    },
+    "expected_outcome": "ineligible",
+    "expected_policy_ids": [
+      "final-sale-v2"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-096",
+    "split": "test",
+    "scenario": "final-sale-change-of-mind",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-032",
+    "question": "I'd like to return 1 of item ORD-0232-ITEM-2 from order ORD-0232 because I changed my mind. Condition: unused. All accessories included: yes. Original packaging: yes.",
+    "inputs": {
+      "order_id": "ORD-0232",
+      "item_id": "ORD-0232-ITEM-2",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "unused",
+      "accessories_present": true,
+      "original_packaging": true
+    },
+    "expected_outcome": "ineligible",
+    "expected_policy_ids": [
+      "final-sale-v1"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-097",
+    "split": "development",
+    "scenario": "final-sale-change-of-mind",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-127",
+    "question": "I'd like to return 1 of item ORD-0527-ITEM-2 from order ORD-0527 because I changed my mind. Condition: unused. All accessories included: yes. Original packaging: yes.",
+    "inputs": {
+      "order_id": "ORD-0527",
+      "item_id": "ORD-0527-ITEM-2",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "unused",
+      "accessories_present": true,
+      "original_packaging": true
+    },
+    "expected_outcome": "ineligible",
+    "expected_policy_ids": [
+      "final-sale-v1"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-098",
+    "split": "development",
+    "scenario": "final-sale-defective",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-137",
+    "question": "I'd like to return 1 of item ORD-0137-ITEM-1 from order ORD-0137 because it is defective. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0137",
+      "item_id": "ORD-0137-ITEM-1",
+      "quantity": 1,
+      "reason": "defective",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "review_required",
+    "expected_policy_ids": [
+      "final-sale-v1"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-099",
+    "split": "development",
+    "scenario": "final-sale-defective",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-012",
+    "question": "I'd like to return 1 of item ORD-0212-ITEM-2 from order ORD-0212 because it is defective. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0212",
+      "item_id": "ORD-0212-ITEM-2",
+      "quantity": 1,
+      "reason": "defective",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "review_required",
+    "expected_policy_ids": [
+      "final-sale-v1"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-100",
+    "split": "development",
+    "scenario": "final-sale-defective",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-200",
+    "question": "I'd like to return 1 of item ORD-1000-ITEM-1 from order ORD-1000 because it is defective. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-1000",
+      "item_id": "ORD-1000-ITEM-1",
+      "quantity": 1,
+      "reason": "defective",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "review_required",
+    "expected_policy_ids": [
+      "final-sale-v1"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-101",
+    "split": "development",
+    "scenario": "final-sale-defective",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-147",
+    "question": "I'd like to return 1 of item ORD-0147-ITEM-2 from order ORD-0147 because it is defective. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0147",
+      "item_id": "ORD-0147-ITEM-2",
+      "quantity": 1,
+      "reason": "defective",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "review_required",
+    "expected_policy_ids": [
+      "final-sale-v2"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-102",
+    "split": "development",
+    "scenario": "not-delivered-shipped",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-043",
+    "question": "I'd like to return 1 of item ORD-0843-ITEM-1 from order ORD-0843 because I changed my mind. Condition: unused. All accessories included: yes. Original packaging: yes.",
+    "inputs": {
+      "order_id": "ORD-0843",
+      "item_id": "ORD-0843-ITEM-1",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "unused",
+      "accessories_present": true,
+      "original_packaging": true
+    },
+    "expected_outcome": "ineligible",
+    "expected_policy_ids": [
+      "shipping-status-v2"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-103",
+    "split": "development",
+    "scenario": "not-delivered-shipped",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-187",
+    "question": "I'd like to return 1 of item ORD-0187-ITEM-2 from order ORD-0187 because I changed my mind. Condition: unused. All accessories included: yes. Original packaging: yes.",
+    "inputs": {
+      "order_id": "ORD-0187",
+      "item_id": "ORD-0187-ITEM-2",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "unused",
+      "accessories_present": true,
+      "original_packaging": true
+    },
+    "expected_outcome": "ineligible",
+    "expected_policy_ids": [
+      "shipping-status-v2"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-104",
+    "split": "development",
+    "scenario": "not-delivered-shipped",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-076",
+    "question": "I'd like to return 1 of item ORD-0876-ITEM-2 from order ORD-0876 because I changed my mind. Condition: unused. All accessories included: yes. Original packaging: yes.",
+    "inputs": {
+      "order_id": "ORD-0876",
+      "item_id": "ORD-0876-ITEM-2",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "unused",
+      "accessories_present": true,
+      "original_packaging": true
+    },
+    "expected_outcome": "ineligible",
+    "expected_policy_ids": [
+      "shipping-status-v2"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-105",
+    "split": "test",
+    "scenario": "not-delivered-shipped",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-027",
+    "question": "I'd like to return 1 of item ORD-0027-ITEM-1 from order ORD-0027 because I changed my mind. Condition: unused. All accessories included: yes. Original packaging: yes.",
+    "inputs": {
+      "order_id": "ORD-0027",
+      "item_id": "ORD-0027-ITEM-1",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "unused",
+      "accessories_present": true,
+      "original_packaging": true
+    },
+    "expected_outcome": "ineligible",
+    "expected_policy_ids": [
+      "shipping-status-v2"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-106",
+    "split": "development",
+    "scenario": "not-delivered-processing",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-033",
+    "question": "I'd like to return 1 of item ORD-0633-ITEM-2 from order ORD-0633 because I changed my mind. Condition: unused. All accessories included: yes. Original packaging: yes.",
+    "inputs": {
+      "order_id": "ORD-0633",
+      "item_id": "ORD-0633-ITEM-2",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "unused",
+      "accessories_present": true,
+      "original_packaging": true
+    },
+    "expected_outcome": "ineligible",
+    "expected_policy_ids": [
+      "shipping-status-v2"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-107",
+    "split": "development",
+    "scenario": "not-delivered-processing",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-014",
+    "question": "I'd like to return 1 of item ORD-0814-ITEM-1 from order ORD-0814 because I changed my mind. Condition: unused. All accessories included: yes. Original packaging: yes.",
+    "inputs": {
+      "order_id": "ORD-0814",
+      "item_id": "ORD-0814-ITEM-1",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "unused",
+      "accessories_present": true,
+      "original_packaging": true
+    },
+    "expected_outcome": "ineligible",
+    "expected_policy_ids": [
+      "shipping-status-v2"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-108",
+    "split": "development",
+    "scenario": "not-delivered-processing",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-127",
+    "question": "I'd like to return 1 of item ORD-0327-ITEM-1 from order ORD-0327 because I changed my mind. Condition: unused. All accessories included: yes. Original packaging: yes.",
+    "inputs": {
+      "order_id": "ORD-0327",
+      "item_id": "ORD-0327-ITEM-1",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "unused",
+      "accessories_present": true,
+      "original_packaging": true
+    },
+    "expected_outcome": "ineligible",
+    "expected_policy_ids": [
+      "shipping-status-v2"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-109",
+    "split": "development",
+    "scenario": "not-delivered-processing",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-017",
+    "question": "I'd like to return 1 of item ORD-0417-ITEM-1 from order ORD-0417 because I changed my mind. Condition: unused. All accessories included: yes. Original packaging: yes.",
+    "inputs": {
+      "order_id": "ORD-0417",
+      "item_id": "ORD-0417-ITEM-1",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "unused",
+      "accessories_present": true,
+      "original_packaging": true
+    },
+    "expected_outcome": "ineligible",
+    "expected_policy_ids": [
+      "shipping-status-v2"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-110",
+    "split": "test",
+    "scenario": "not-delivered-cancelled",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-131",
+    "question": "I'd like to return 1 of item ORD-0331-ITEM-1 from order ORD-0331 because I changed my mind. Condition: unused. All accessories included: yes. Original packaging: yes.",
+    "inputs": {
+      "order_id": "ORD-0331",
+      "item_id": "ORD-0331-ITEM-1",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "unused",
+      "accessories_present": true,
+      "original_packaging": true
+    },
+    "expected_outcome": "ineligible",
+    "expected_policy_ids": [
+      "shipping-status-v2"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-111",
+    "split": "development",
+    "scenario": "not-delivered-cancelled",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-008",
+    "question": "I'd like to return 1 of item ORD-0808-ITEM-1 from order ORD-0808 because I changed my mind. Condition: unused. All accessories included: yes. Original packaging: yes.",
+    "inputs": {
+      "order_id": "ORD-0808",
+      "item_id": "ORD-0808-ITEM-1",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "unused",
+      "accessories_present": true,
+      "original_packaging": true
+    },
+    "expected_outcome": "ineligible",
+    "expected_policy_ids": [
+      "shipping-status-v2"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-112",
+    "split": "development",
+    "scenario": "not-delivered-cancelled",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-065",
+    "question": "I'd like to return 1 of item ORD-0065-ITEM-2 from order ORD-0065 because I changed my mind. Condition: unused. All accessories included: yes. Original packaging: yes.",
+    "inputs": {
+      "order_id": "ORD-0065",
+      "item_id": "ORD-0065-ITEM-2",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "unused",
+      "accessories_present": true,
+      "original_packaging": true
+    },
+    "expected_outcome": "ineligible",
+    "expected_policy_ids": [
+      "shipping-status-v2"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-113",
+    "split": "development",
+    "scenario": "not-delivered-cancelled",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-070",
+    "question": "I'd like to return 1 of item ORD-0270-ITEM-2 from order ORD-0270 because I changed my mind. Condition: unused. All accessories included: yes. Original packaging: yes.",
+    "inputs": {
+      "order_id": "ORD-0270",
+      "item_id": "ORD-0270-ITEM-2",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "unused",
+      "accessories_present": true,
+      "original_packaging": true
+    },
+    "expected_outcome": "ineligible",
+    "expected_policy_ids": [
+      "shipping-status-v2"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-114",
+    "split": "development",
+    "scenario": "quantity-over-purchased",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-037",
+    "question": "I'd like to return 4 of item ORD-0437-ITEM-2 from order ORD-0437 because it is defective. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0437",
+      "item_id": "ORD-0437-ITEM-2",
+      "quantity": 4,
+      "reason": "defective",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "ineligible",
+    "expected_policy_ids": [
+      "partial-returns-v2"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-115",
+    "split": "test",
+    "scenario": "quantity-over-purchased",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-058",
+    "question": "I'd like to return 3 of item ORD-0858-ITEM-2 from order ORD-0858 because it is defective. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0858",
+      "item_id": "ORD-0858-ITEM-2",
+      "quantity": 3,
+      "reason": "defective",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "ineligible",
+    "expected_policy_ids": [
+      "partial-returns-v2"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-116",
+    "split": "development",
+    "scenario": "quantity-over-purchased",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-047",
+    "question": "I'd like to return 4 of item ORD-0447-ITEM-2 from order ORD-0447 because it is defective. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0447",
+      "item_id": "ORD-0447-ITEM-2",
+      "quantity": 4,
+      "reason": "defective",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "ineligible",
+    "expected_policy_ids": [
+      "partial-returns-v2"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-117",
+    "split": "development",
+    "scenario": "quantity-over-purchased",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-190",
+    "question": "I'd like to return 3 of item ORD-0990-ITEM-1 from order ORD-0990 because it is defective. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0990",
+      "item_id": "ORD-0990-ITEM-1",
+      "quantity": 3,
+      "reason": "defective",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "ineligible",
+    "expected_policy_ids": [
+      "partial-returns-v2"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-118",
+    "split": "development",
+    "scenario": "quantity-zero",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-061",
+    "question": "I'd like to return 0 of item ORD-0261-ITEM-1 from order ORD-0261 because it is defective. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0261",
+      "item_id": "ORD-0261-ITEM-1",
+      "quantity": 0,
+      "reason": "defective",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "ineligible",
+    "expected_policy_ids": [
+      "partial-returns-v2"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-119",
+    "split": "development",
+    "scenario": "quantity-zero",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-168",
+    "question": "I'd like to return 0 of item ORD-0168-ITEM-2 from order ORD-0168 because it is defective. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0168",
+      "item_id": "ORD-0168-ITEM-2",
+      "quantity": 0,
+      "reason": "defective",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "ineligible",
+    "expected_policy_ids": [
+      "partial-returns-v2"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-120",
+    "split": "test",
+    "scenario": "quantity-already-returned",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-047",
+    "question": "I'd like to return 1 of item ORD-0647-ITEM-2 from order ORD-0647 because it is defective. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0647",
+      "item_id": "ORD-0647-ITEM-2",
+      "quantity": 1,
+      "reason": "defective",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "ineligible",
+    "expected_policy_ids": [
+      "duplicate-returns-v1"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-121",
+    "split": "development",
+    "scenario": "quantity-already-returned",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-138",
+    "question": "I'd like to return 1 of item ORD-0138-ITEM-1 from order ORD-0138 because it is defective. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0138",
+      "item_id": "ORD-0138-ITEM-1",
+      "quantity": 1,
+      "reason": "defective",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "ineligible",
+    "expected_policy_ids": [
+      "duplicate-returns-v1"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-122",
+    "split": "development",
+    "scenario": "quantity-already-returned",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-192",
+    "question": "I'd like to return 1 of item ORD-0792-ITEM-2 from order ORD-0792 because it is defective. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0792",
+      "item_id": "ORD-0792-ITEM-2",
+      "quantity": 1,
+      "reason": "defective",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "ineligible",
+    "expected_policy_ids": [
+      "duplicate-returns-v1"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-123",
+    "split": "development",
+    "scenario": "quantity-already-returned",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-057",
+    "question": "I'd like to return 1 of item ORD-0457-ITEM-1 from order ORD-0457 because it is defective. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0457",
+      "item_id": "ORD-0457-ITEM-1",
+      "quantity": 1,
+      "reason": "defective",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "ineligible",
+    "expected_policy_ids": [
+      "duplicate-returns-v1"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-124",
+    "split": "development",
+    "scenario": "quantity-partly-returned",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-184",
+    "question": "I'd like to return 2 of item ORD-0984-ITEM-2 from order ORD-0984 because it is defective. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0984",
+      "item_id": "ORD-0984-ITEM-2",
+      "quantity": 2,
+      "reason": "defective",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "eligible",
+    "expected_policy_ids": [
+      "defective-items-v1",
+      "return-shipping-v1"
+    ],
+    "expected_fee_cents": 0,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-125",
+    "split": "development",
+    "scenario": "quantity-partly-returned",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-065",
+    "question": "I'd like to return 1 of item ORD-0665-ITEM-1 from order ORD-0665 because it is defective. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0665",
+      "item_id": "ORD-0665-ITEM-1",
+      "quantity": 1,
+      "reason": "defective",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "eligible",
+    "expected_policy_ids": [
+      "defective-items-v1",
+      "return-shipping-v1"
+    ],
+    "expected_fee_cents": 0,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-126",
+    "split": "development",
+    "scenario": "quantity-partly-returned",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-148",
+    "question": "I'd like to return 1 of item ORD-0948-ITEM-1 from order ORD-0948 because it is defective. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0948",
+      "item_id": "ORD-0948-ITEM-1",
+      "quantity": 1,
+      "reason": "defective",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "eligible",
+    "expected_policy_ids": [
+      "defective-items-v1",
+      "return-shipping-v1"
+    ],
+    "expected_fee_cents": 0,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-127",
+    "split": "test",
+    "scenario": "quantity-after-rejected-return",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-074",
+    "question": "I'd like to return 1 of item ORD-0474-ITEM-1 from order ORD-0474 because it is defective. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0474",
+      "item_id": "ORD-0474-ITEM-1",
+      "quantity": 1,
+      "reason": "defective",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "eligible",
+    "expected_policy_ids": [
+      "defective-items-v1",
+      "return-shipping-v1"
+    ],
+    "expected_fee_cents": 0,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-128",
+    "split": "development",
+    "scenario": "quantity-after-rejected-return",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-171",
+    "question": "I'd like to return 1 of item ORD-0571-ITEM-2 from order ORD-0571 because it is defective. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0571",
+      "item_id": "ORD-0571-ITEM-2",
+      "quantity": 1,
+      "reason": "defective",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "eligible",
+    "expected_policy_ids": [
+      "defective-items-v1",
+      "return-shipping-v1"
+    ],
+    "expected_fee_cents": 0,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-129",
+    "split": "development",
+    "scenario": "quantity-after-rejected-return",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-166",
+    "question": "I'd like to return 1 of item ORD-0766-ITEM-2 from order ORD-0766 because it is defective. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0766",
+      "item_id": "ORD-0766-ITEM-2",
+      "quantity": 1,
+      "reason": "defective",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "eligible",
+    "expected_policy_ids": [
+      "defective-items-v2",
+      "return-shipping-v2"
+    ],
+    "expected_fee_cents": 0,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order",
+      "check_return_eligibility"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Explain the outcome with the applicable policy evidence and any fee; ask for confirmation before any write."
+  },
+  {
+    "case_id": "EVAL-130",
+    "split": "development",
+    "scenario": "access-other-customer",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-001",
+    "question": "I'd like to return 1 of item ORD-0274-ITEM-1 from order ORD-0274 because it is defective. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0274",
+      "item_id": "ORD-0274-ITEM-1",
+      "quantity": 1,
+      "reason": "defective",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "access_denied",
+    "expected_policy_ids": [
+      "identity-access-v2"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Deny without confirming the order exists or disclosing its contents."
+  },
+  {
+    "case_id": "EVAL-131",
+    "split": "development",
+    "scenario": "access-other-customer",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-001",
+    "question": "I'd like to return 1 of item ORD-0267-ITEM-1 from order ORD-0267 because it is defective. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0267",
+      "item_id": "ORD-0267-ITEM-1",
+      "quantity": 1,
+      "reason": "defective",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "access_denied",
+    "expected_policy_ids": [
+      "identity-access-v2"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Deny without confirming the order exists or disclosing its contents."
+  },
+  {
+    "case_id": "EVAL-132",
+    "split": "development",
+    "scenario": "access-other-customer",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-001",
+    "question": "I'd like to return 1 of item ORD-0943-ITEM-1 from order ORD-0943 because it is defective. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0943",
+      "item_id": "ORD-0943-ITEM-1",
+      "quantity": 1,
+      "reason": "defective",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "access_denied",
+    "expected_policy_ids": [
+      "identity-access-v2"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Deny without confirming the order exists or disclosing its contents."
+  },
+  {
+    "case_id": "EVAL-133",
+    "split": "development",
+    "scenario": "access-other-customer",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-001",
+    "question": "I'd like to return 1 of item ORD-0427-ITEM-1 from order ORD-0427 because it is defective. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0427",
+      "item_id": "ORD-0427-ITEM-1",
+      "quantity": 1,
+      "reason": "defective",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "access_denied",
+    "expected_policy_ids": [
+      "identity-access-v2"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Deny without confirming the order exists or disclosing its contents."
+  },
+  {
+    "case_id": "EVAL-134",
+    "split": "test",
+    "scenario": "access-other-customer",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-001",
+    "question": "I'd like to return 1 of item ORD-0018-ITEM-1 from order ORD-0018 because it is defective. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0018",
+      "item_id": "ORD-0018-ITEM-1",
+      "quantity": 1,
+      "reason": "defective",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "access_denied",
+    "expected_policy_ids": [
+      "identity-access-v2"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Deny without confirming the order exists or disclosing its contents."
+  },
+  {
+    "case_id": "EVAL-135",
+    "split": "development",
+    "scenario": "access-other-customer",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-001",
+    "question": "I'd like to return 1 of item ORD-0478-ITEM-1 from order ORD-0478 because it is defective. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0478",
+      "item_id": "ORD-0478-ITEM-1",
+      "quantity": 1,
+      "reason": "defective",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "access_denied",
+    "expected_policy_ids": [
+      "identity-access-v2"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Deny without confirming the order exists or disclosing its contents."
+  },
+  {
+    "case_id": "EVAL-136",
+    "split": "development",
+    "scenario": "access-other-customer",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-001",
+    "question": "I'd like to return 1 of item ORD-0490-ITEM-2 from order ORD-0490 because it is defective. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0490",
+      "item_id": "ORD-0490-ITEM-2",
+      "quantity": 1,
+      "reason": "defective",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "access_denied",
+    "expected_policy_ids": [
+      "identity-access-v2"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Deny without confirming the order exists or disclosing its contents."
+  },
+  {
+    "case_id": "EVAL-137",
+    "split": "development",
+    "scenario": "access-other-customer",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-001",
+    "question": "I'd like to return 1 of item ORD-0576-ITEM-1 from order ORD-0576 because it is defective. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0576",
+      "item_id": "ORD-0576-ITEM-1",
+      "quantity": 1,
+      "reason": "defective",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "access_denied",
+    "expected_policy_ids": [
+      "identity-access-v2"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Deny without confirming the order exists or disclosing its contents."
+  },
+  {
+    "case_id": "EVAL-138",
+    "split": "development",
+    "scenario": "access-other-customer",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-001",
+    "question": "I'd like to return 1 of item ORD-0936-ITEM-2 from order ORD-0936 because it is defective. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0936",
+      "item_id": "ORD-0936-ITEM-2",
+      "quantity": 1,
+      "reason": "defective",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "access_denied",
+    "expected_policy_ids": [
+      "identity-access-v2"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Deny without confirming the order exists or disclosing its contents."
+  },
+  {
+    "case_id": "EVAL-139",
+    "split": "test",
+    "scenario": "access-other-customer",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-001",
+    "question": "I'd like to return 1 of item ORD-0183-ITEM-1 from order ORD-0183 because it is defective. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0183",
+      "item_id": "ORD-0183-ITEM-1",
+      "quantity": 1,
+      "reason": "defective",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "access_denied",
+    "expected_policy_ids": [
+      "identity-access-v2"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Deny without confirming the order exists or disclosing its contents."
+  },
+  {
+    "case_id": "EVAL-140",
+    "split": "development",
+    "scenario": "access-other-customer-undelivered",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-001",
+    "question": "I'd like to return 1 of item ORD-0374-ITEM-1 from order ORD-0374 because I changed my mind. Condition: unused. All accessories included: yes. Original packaging: yes.",
+    "inputs": {
+      "order_id": "ORD-0374",
+      "item_id": "ORD-0374-ITEM-1",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "unused",
+      "accessories_present": true,
+      "original_packaging": true
+    },
+    "expected_outcome": "access_denied",
+    "expected_policy_ids": [
+      "identity-access-v2"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Deny without confirming the order exists or disclosing its contents."
+  },
+  {
+    "case_id": "EVAL-141",
+    "split": "development",
+    "scenario": "access-other-customer-undelivered",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-001",
+    "question": "I'd like to return 1 of item ORD-0430-ITEM-2 from order ORD-0430 because I changed my mind. Condition: unused. All accessories included: yes. Original packaging: yes.",
+    "inputs": {
+      "order_id": "ORD-0430",
+      "item_id": "ORD-0430-ITEM-2",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "unused",
+      "accessories_present": true,
+      "original_packaging": true
+    },
+    "expected_outcome": "access_denied",
+    "expected_policy_ids": [
+      "identity-access-v2"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Deny without confirming the order exists or disclosing its contents."
+  },
+  {
+    "case_id": "EVAL-142",
+    "split": "development",
+    "scenario": "access-other-customer-undelivered",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-001",
+    "question": "I'd like to return 1 of item ORD-0303-ITEM-2 from order ORD-0303 because I changed my mind. Condition: unused. All accessories included: yes. Original packaging: yes.",
+    "inputs": {
+      "order_id": "ORD-0303",
+      "item_id": "ORD-0303-ITEM-2",
+      "quantity": 1,
+      "reason": "change_of_mind",
+      "condition": "unused",
+      "accessories_present": true,
+      "original_packaging": true
+    },
+    "expected_outcome": "access_denied",
+    "expected_policy_ids": [
+      "identity-access-v2"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Deny without confirming the order exists or disclosing its contents."
+  },
+  {
+    "case_id": "EVAL-143",
+    "split": "development",
+    "scenario": "access-unknown-customer",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-999",
+    "question": "I'd like to return 1 of item ORD-0425-ITEM-1 from order ORD-0425 because it is defective. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0425",
+      "item_id": "ORD-0425-ITEM-1",
+      "quantity": 1,
+      "reason": "defective",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "access_denied",
+    "expected_policy_ids": [
+      "identity-access-v2"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Deny without confirming the order exists or disclosing its contents."
+  },
+  {
+    "case_id": "EVAL-144",
+    "split": "test",
+    "scenario": "access-unknown-customer",
+    "as_of": "2026-10-03",
+    "authenticated_customer_id": "CUST-999",
+    "question": "I'd like to return 1 of item ORD-0796-ITEM-1 from order ORD-0796 because it is defective. Condition: opened. All accessories included: yes. Original packaging: no.",
+    "inputs": {
+      "order_id": "ORD-0796",
+      "item_id": "ORD-0796-ITEM-1",
+      "quantity": 1,
+      "reason": "defective",
+      "condition": "opened",
+      "accessories_present": true,
+      "original_packaging": false
+    },
+    "expected_outcome": "access_denied",
+    "expected_policy_ids": [
+      "identity-access-v2"
+    ],
+    "expected_fee_cents": null,
+    "version_sensitive": false,
+    "required_tools": [
+      "get_order"
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "issue_refund"
+    ],
+    "expected_behavior": "Deny without confirming the order exists or disclosing its contents."
+  }
+]

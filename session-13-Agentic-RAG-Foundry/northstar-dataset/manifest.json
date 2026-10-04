@@ -1,0 +1,21 @@
+{
+  "synthetic": true,
+  "schema_version": 2,
+  "seed": 42,
+  "as_of": "2026-10-03",
+  "v2_effective_from": "2026-09-15",
+  "counts": {
+    "customers": 200,
+    "products": 100,
+    "orders": 1000,
+    "order_items": 2000,
+    "shipments": 771,
+    "returns": 88,
+    "refunds": 39,
+    "policy_documents": 40,
+    "policy_chunks": 120,
+    "return_cases": 144,
+    "policy_questions": 33,
+    "adversarial_specs": 6
+  }
+}

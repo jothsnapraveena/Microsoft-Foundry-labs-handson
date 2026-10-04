@@ -1,0 +1,441 @@
+[
+  {
+    "qa_id": "QA-001",
+    "split": "development",
+    "type": "single",
+    "question": "Can I cancel an order that has already shipped?",
+    "reference_date": "2026-10-03",
+    "date_field": "as_of",
+    "answerable": true,
+    "expected_chunk_ids": [
+      "cancellation-v2-chunk-2"
+    ],
+    "expected_answer": "No. Only orders still in processing status can be cancelled. A shipped or delivered order cannot be cancelled, though a delivered item may be returned under the return policies."
+  },
+  {
+    "qa_id": "QA-002",
+    "split": "development",
+    "type": "single",
+    "question": "Do I need the original packaging to return a defective item?",
+    "reference_date": "2026-10-03",
+    "date_field": "as_of",
+    "answerable": true,
+    "expected_chunk_ids": [
+      "defective-items-v2-chunk-3"
+    ],
+    "expected_answer": "No. Original packaging is not required for a defect return."
+  },
+  {
+    "qa_id": "QA-003",
+    "split": "development",
+    "type": "single",
+    "question": "Can I return a final-sale item because I changed my mind?",
+    "reference_date": "2026-10-03",
+    "date_field": "as_of",
+    "answerable": true,
+    "expected_chunk_ids": [
+      "final-sale-v2-chunk-1"
+    ],
+    "expected_answer": "No. Final-sale items cannot be returned for a change of mind, whatever their condition or delivery date."
+  },
+  {
+    "qa_id": "QA-004",
+    "split": "development",
+    "type": "single",
+    "question": "Will you ever ask me for my card's security code?",
+    "reference_date": "2026-10-03",
+    "date_field": "as_of",
+    "answerable": true,
+    "expected_chunk_ids": [
+      "payment-data-v2-chunk-1"
+    ],
+    "expected_answer": "No. Northstar never asks for a full card number, security code or bank password."
+  },
+  {
+    "qa_id": "QA-005",
+    "split": "test",
+    "type": "single",
+    "question": "What does a submitted refund status mean?",
+    "reference_date": "2026-10-03",
+    "date_field": "as_of",
+    "answerable": true,
+    "expected_chunk_ids": [
+      "refund-status-v2-chunk-1"
+    ],
+    "expected_answer": "The refund has been sent to the payment provider but has not posted yet. Pending means the item is still being inspected, and paid means the refund has posted."
+  },
+  {
+    "qa_id": "QA-006",
+    "split": "development",
+    "type": "single",
+    "question": "Can I return one of the three units I bought and keep the others?",
+    "reference_date": "2026-10-03",
+    "date_field": "as_of",
+    "answerable": true,
+    "expected_chunk_ids": [
+      "partial-returns-v2-chunk-1",
+      "partial-returns-v2-chunk-2"
+    ],
+    "expected_answer": "Yes. A return covers a specific item and quantity. The quantity must be at least one and no more than the quantity purchased minus units already in an active or completed return."
+  },
+  {
+    "qa_id": "QA-007",
+    "split": "development",
+    "type": "single",
+    "question": "I gave you my order number. Why can't you tell me about the order?",
+    "reference_date": "2026-10-03",
+    "date_field": "as_of",
+    "answerable": true,
+    "expected_chunk_ids": [
+      "identity-access-v2-chunk-1",
+      "identity-access-v2-chunk-2"
+    ],
+    "expected_answer": "An order number in chat does not prove ownership. Order details are available only to the signed-in account that placed the order."
+  },
+  {
+    "qa_id": "QA-008",
+    "split": "development",
+    "type": "single",
+    "question": "What happens if I submit the same return request twice?",
+    "reference_date": "2026-10-03",
+    "date_field": "as_of",
+    "answerable": true,
+    "expected_chunk_ids": [
+      "duplicate-returns-v2-chunk-2"
+    ],
+    "expected_answer": "You get the original return back and no second return is created. A repeated request with different details is rejected."
+  },
+  {
+    "qa_id": "QA-009",
+    "split": "development",
+    "type": "single",
+    "question": "Is the estimated delivery date guaranteed?",
+    "reference_date": "2026-10-03",
+    "date_field": "as_of",
+    "answerable": true,
+    "expected_chunk_ids": [
+      "shipping-status-v2-chunk-1"
+    ],
+    "expected_answer": "No. The estimated delivery date is an estimate and is not guaranteed."
+  },
+  {
+    "qa_id": "QA-010",
+    "split": "test",
+    "type": "single",
+    "question": "Does the day my parcel was delivered count toward the return window?",
+    "reference_date": "2026-10-03",
+    "date_field": "as_of",
+    "answerable": true,
+    "expected_chunk_ids": [
+      "standard-returns-v2-chunk-1"
+    ],
+    "expected_answer": "The delivery day is day zero, so the window is counted from the day after delivery."
+  },
+  {
+    "qa_id": "QA-011",
+    "split": "development",
+    "type": "single",
+    "question": "My parcel is four days past its estimated delivery date and still shows as shipped. What happens now?",
+    "reference_date": "2026-10-03",
+    "date_field": "as_of",
+    "answerable": true,
+    "expected_chunk_ids": [
+      "lost-parcel-v2-chunk-1",
+      "lost-parcel-v2-chunk-2"
+    ],
+    "expected_answer": "It is 3 or more days overdue, so support opens a carrier investigation. No new delivery date is promised and no refund or replacement is issued automatically while the investigation is open."
+  },
+  {
+    "qa_id": "QA-012",
+    "split": "development",
+    "type": "version",
+    "question": "I placed my order on 2026-08-20. How many days do I have to return headphones I changed my mind about?",
+    "reference_date": "2026-08-20",
+    "date_field": "order_date",
+    "answerable": true,
+    "expected_chunk_ids": [
+      "electronics-returns-v1-chunk-1"
+    ],
+    "expected_answer": "14 calendar days after delivery, with the delivery day counted as day zero."
+  },
+  {
+    "qa_id": "QA-013",
+    "split": "development",
+    "type": "version",
+    "question": "I placed my order on 2026-09-20. How many days do I have to return headphones I changed my mind about?",
+    "reference_date": "2026-09-20",
+    "date_field": "order_date",
+    "answerable": true,
+    "expected_chunk_ids": [
+      "electronics-returns-v2-chunk-1"
+    ],
+    "expected_answer": "15 calendar days after delivery, with the delivery day counted as day zero."
+  },
+  {
+    "qa_id": "QA-014",
+    "split": "development",
+    "type": "version",
+    "question": "I placed my order on 2026-08-20. What is the return shipping fee for a change-of-mind return?",
+    "reference_date": "2026-08-20",
+    "date_field": "order_date",
+    "answerable": true,
+    "expected_chunk_ids": [
+      "return-shipping-v1-chunk-2"
+    ],
+    "expected_answer": "$7.00 (700 cents) per return, shown before you confirm."
+  },
+  {
+    "qa_id": "QA-015",
+    "split": "test",
+    "type": "version",
+    "question": "I placed my order on 2026-09-20. What is the return shipping fee for a change-of-mind return?",
+    "reference_date": "2026-09-20",
+    "date_field": "order_date",
+    "answerable": true,
+    "expected_chunk_ids": [
+      "return-shipping-v2-chunk-2"
+    ],
+    "expected_answer": "$5.00 (500 cents) per return, shown before you confirm."
+  },
+  {
+    "qa_id": "QA-016",
+    "split": "development",
+    "type": "version",
+    "question": "The warehouse received my return on 2026-08-20. How long until my refund posts?",
+    "reference_date": "2026-08-20",
+    "date_field": "event_date",
+    "answerable": true,
+    "expected_chunk_ids": [
+      "refund-timing-v1-chunk-1",
+      "refund-timing-v1-chunk-2"
+    ],
+    "expected_answer": "Inspection normally takes 2 business days from receipt, and the refund then normally posts within 5 to 7 business days. These are normal times, not guarantees."
+  },
+  {
+    "qa_id": "QA-017",
+    "split": "development",
+    "type": "version",
+    "question": "The warehouse received my return on 2026-09-20. How long until my refund posts?",
+    "reference_date": "2026-09-20",
+    "date_field": "event_date",
+    "answerable": true,
+    "expected_chunk_ids": [
+      "refund-timing-v2-chunk-1",
+      "refund-timing-v2-chunk-2"
+    ],
+    "expected_answer": "Inspection normally takes 2 business days from receipt, and the refund then normally posts within 3 to 5 business days. These are normal times, not guarantees."
+  },
+  {
+    "qa_id": "QA-018",
+    "split": "development",
+    "type": "version",
+    "question": "My order was marked delivered on 2026-08-20 but I never received it. How long do I have to report it?",
+    "reference_date": "2026-08-20",
+    "date_field": "event_date",
+    "answerable": true,
+    "expected_chunk_ids": [
+      "delivered-not-received-v1-chunk-2"
+    ],
+    "expected_answer": "7 calendar days from the delivered date."
+  },
+  {
+    "qa_id": "QA-019",
+    "split": "development",
+    "type": "version",
+    "question": "My order was marked delivered on 2026-09-20 but I never received it. How long do I have to report it?",
+    "reference_date": "2026-09-20",
+    "date_field": "event_date",
+    "answerable": true,
+    "expected_chunk_ids": [
+      "delivered-not-received-v2-chunk-2"
+    ],
+    "expected_answer": "14 calendar days from the delivered date."
+  },
+  {
+    "qa_id": "QA-020",
+    "split": "test",
+    "type": "version",
+    "question": "I asked for my case to be escalated on 2026-08-20. How quickly does support respond?",
+    "reference_date": "2026-08-20",
+    "date_field": "event_date",
+    "answerable": true,
+    "expected_chunk_ids": [
+      "support-escalation-v1-chunk-3"
+    ],
+    "expected_answer": "Normally within 3 business days. The ticket starts a review; it does not approve the request."
+  },
+  {
+    "qa_id": "QA-021",
+    "split": "development",
+    "type": "version",
+    "question": "I asked for my case to be escalated on 2026-09-20. How quickly does support respond?",
+    "reference_date": "2026-09-20",
+    "date_field": "event_date",
+    "answerable": true,
+    "expected_chunk_ids": [
+      "support-escalation-v2-chunk-3"
+    ],
+    "expected_answer": "Normally within 2 business days. The ticket starts a review; it does not approve the request."
+  },
+  {
+    "qa_id": "QA-022",
+    "split": "development",
+    "type": "multi",
+    "question": "I placed my order on 2026-08-20. I opened my headphones, they work fine, and I just don't want them. Can I return them and what will it cost?",
+    "reference_date": "2026-08-20",
+    "date_field": "order_date",
+    "answerable": true,
+    "expected_chunk_ids": [
+      "electronics-returns-v1-chunk-1",
+      "electronics-returns-v1-chunk-2",
+      "return-shipping-v1-chunk-2"
+    ],
+    "expected_answer": "Yes, if it is within 14 calendar days after delivery, the item is undamaged and all accessories are included; opened packaging is allowed for electronics. The return shipping fee is $7.00 (700 cents)."
+  },
+  {
+    "qa_id": "QA-023",
+    "split": "development",
+    "type": "multi",
+    "question": "I placed my order on 2026-09-20. I opened my headphones, they work fine, and I just don't want them. Can I return them and what will it cost?",
+    "reference_date": "2026-09-20",
+    "date_field": "order_date",
+    "answerable": true,
+    "expected_chunk_ids": [
+      "electronics-returns-v2-chunk-1",
+      "electronics-returns-v2-chunk-2",
+      "return-shipping-v2-chunk-2"
+    ],
+    "expected_answer": "Yes, if it is within 15 calendar days after delivery, the item is undamaged and all accessories are included; opened packaging is allowed for electronics. The return shipping fee is $5.00 (500 cents)."
+  },
+  {
+    "qa_id": "QA-024",
+    "split": "development",
+    "type": "multi",
+    "question": "My marketplace item arrived broken. Do I get free return shipping?",
+    "reference_date": "2026-10-03",
+    "date_field": "as_of",
+    "answerable": true,
+    "expected_chunk_ids": [
+      "marketplace-v2-chunk-1",
+      "marketplace-v2-chunk-2",
+      "defective-items-v2-chunk-2"
+    ],
+    "expected_answer": "Not automatically. Marketplace items are not covered by Northstar's defective-items rule; the request goes to seller support review, which decides the outcome and any fees."
+  },
+  {
+    "qa_id": "QA-025",
+    "split": "test",
+    "type": "multi",
+    "question": "My final-sale item stopped working after a week. Can I return it?",
+    "reference_date": "2026-10-03",
+    "date_field": "as_of",
+    "answerable": true,
+    "expected_chunk_ids": [
+      "final-sale-v2-chunk-2",
+      "defective-items-v2-chunk-2"
+    ],
+    "expected_answer": "It is not decided automatically. A defect claim on a final-sale item is passed to the support team for review."
+  },
+  {
+    "qa_id": "QA-026",
+    "split": "development",
+    "type": "multi",
+    "question": "My item broke 45 days after delivery. What are my options?",
+    "reference_date": "2026-10-03",
+    "date_field": "as_of",
+    "answerable": true,
+    "expected_chunk_ids": [
+      "defective-items-v2-chunk-2",
+      "warranty-v2-chunk-1",
+      "warranty-v2-chunk-2"
+    ],
+    "expected_answer": "It is outside the 30-day defective-items window, so it is referred for warranty review. Coverage depends on the product's warranty terms, and no replacement or refund is promised before the review."
+  },
+  {
+    "qa_id": "QA-027",
+    "split": "development",
+    "type": "multi",
+    "question": "My return was authorized yesterday. Has my refund been paid?",
+    "reference_date": "2026-10-03",
+    "date_field": "as_of",
+    "answerable": true,
+    "expected_chunk_ids": [
+      "refund-timing-v2-chunk-3",
+      "refund-status-v2-chunk-2"
+    ],
+    "expected_answer": "No. An authorization is not a refund. No refund record exists until the warehouse receives the item, and the refund is issued after inspection."
+  },
+  {
+    "qa_id": "QA-028",
+    "split": "development",
+    "type": "multi",
+    "question": "Before you create my return, what will you show me, and can the result still change afterwards?",
+    "reference_date": "2026-10-03",
+    "date_field": "as_of",
+    "answerable": true,
+    "expected_chunk_ids": [
+      "return-confirmation-v2-chunk-1",
+      "return-confirmation-v2-chunk-2",
+      "return-confirmation-v2-chunk-3"
+    ],
+    "expected_answer": "You see a summary of the item, quantity, reason, eligibility outcome and any fee, and the return is created only after you confirm it. Eligibility is checked again at creation, so it can still be refused if something changed."
+  },
+  {
+    "qa_id": "QA-029",
+    "split": "development",
+    "type": "multi",
+    "question": "The return policy changed after I placed my order. Which version applies to me?",
+    "reference_date": "2026-10-03",
+    "date_field": "as_of",
+    "answerable": true,
+    "expected_chunk_ids": [
+      "policy-versioning-v2-chunk-1",
+      "policy-versioning-v2-chunk-2"
+    ],
+    "expected_answer": "Return eligibility and return shipping fees follow the version in effect on the date the order was placed, even if the policy changed afterwards."
+  },
+  {
+    "qa_id": "QA-030",
+    "split": "test",
+    "type": "unanswerable",
+    "question": "Can I return an item I bought in a Northstar store in Canada?",
+    "reference_date": "2026-10-03",
+    "date_field": "as_of",
+    "answerable": false,
+    "expected_chunk_ids": [],
+    "expected_answer": "The policies do not cover this. Say so and offer to escalate to support; do not invent a rule."
+  },
+  {
+    "qa_id": "QA-031",
+    "split": "development",
+    "type": "unanswerable",
+    "question": "Do you price match other retailers?",
+    "reference_date": "2026-10-03",
+    "date_field": "as_of",
+    "answerable": false,
+    "expected_chunk_ids": [],
+    "expected_answer": "The policies do not cover this. Say so and offer to escalate to support; do not invent a rule."
+  },
+  {
+    "qa_id": "QA-032",
+    "split": "development",
+    "type": "unanswerable",
+    "question": "Can I pay for an order with a gift card?",
+    "reference_date": "2026-10-03",
+    "date_field": "as_of",
+    "answerable": false,
+    "expected_chunk_ids": [],
+    "expected_answer": "The policies do not cover this. Say so and offer to escalate to support; do not invent a rule."
+  },
+  {
+    "qa_id": "QA-033",
+    "split": "development",
+    "type": "unanswerable",
+    "question": "Do you offer gift wrapping?",
+    "reference_date": "2026-10-03",
+    "date_field": "as_of",
+    "answerable": false,
+    "expected_chunk_ids": [],
+    "expected_answer": "The policies do not cover this. Say so and offer to escalate to support; do not invent a rule."
+  }
+]
