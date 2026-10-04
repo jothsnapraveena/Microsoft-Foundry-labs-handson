@@ -1,0 +1,6 @@
+# Native SDK only; install exactly one platform variant.
+foundry-local-sdk; sys_platform != "win32"
+foundry-local-sdk-winml; sys_platform == "win32"
+# Web service (src/api/main.py); not needed for the CLI or tests.
+fastapi>=0.100.0,<1.0.0
+uvicorn>=0.20.0,<1.0.0

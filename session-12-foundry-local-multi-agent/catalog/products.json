@@ -1,0 +1,10 @@
+[
+  {"id": "RTL-BAG-BLU", "title": "Trail daypack, blue", "content": "Blue backpack, 20 litre, with a padded laptop sleeve", "category": "bags"},
+  {"id": "RTL-BAG-GRN", "title": "Trail daypack, green", "content": "Green backpack, 20 litre, with a padded laptop sleeve", "category": "bags"},
+  {"id": "RTL-JKT-RED", "title": "Storm shell, red", "content": "Red jacket, waterproof, with an adjustable hood", "category": "outerwear"},
+  {"id": "RTL-JKT-BLK", "title": "Storm shell, black", "content": "Black jacket, waterproof, with an adjustable hood", "category": "outerwear"},
+  {"id": "RTL-SHO-WHT", "title": "Court trainer, white", "content": "White shoes with a cushioned sole", "category": "footwear"},
+  {"id": "RTL-SHO-BLU", "title": "Court trainer, blue", "content": "Blue shoes with a cushioned sole", "category": "footwear"},
+  {"id": "RTL-SHT-SML", "title": "Everyday tee, small", "content": "Small shirt in soft cotton", "category": "tops"},
+  {"id": "RTL-SHT-LRG", "title": "Everyday tee, large", "content": "Large shirt in soft cotton", "category": "tops"}
+]

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Retail Support Agents</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Retail support agents</h1>
+    <p id="model" class="muted">Checking the local model…</p>
+  </header>
+
+  <main>
+    <form id="case">
+      <label>Sample case
+        <select id="sample"></select>
+      </label>
+      <label>Customer message <span class="muted">(untrusted)</span>
+        <textarea id="customer" rows="4" maxlength="4000" required></textarea>
+      </label>
+      <fieldset>
+        <legend>Trusted order facts</legend>
+        <label>Order ID <input id="order_id" maxlength="200" required></label>
+        <label>Ordered <input id="ordered" maxlength="200" required></label>
+        <label>Received <input id="received" maxlength="200" required></label>
+      </fieldset>
+      <button id="submit" type="submit">Draft a reply</button>
+    </form>
+
+    <section aria-live="polite">
+      <ol id="agents">
+        <li data-agent="triage"><strong>Triage</strong><span>Waiting</span></li>
+        <li data-agent="product"><strong>Product</strong><span>Waiting</span></li>
+        <li data-agent="writer"><strong>Writer</strong><span>Waiting</span></li>
+        <li data-agent="reviewer"><strong>Reviewer</strong><span>Waiting</span></li>
+      </ol>
+
+      <div id="outcome" hidden>
+        <h2 id="status"></h2>
+        <p id="reason" class="muted"></p>
+        <blockquote id="reply" hidden></blockquote>
+        <p id="summary" class="muted"></p>
+      </div>
+
+      <h3>Live draft <span class="muted">(unreviewed model output)</span></h3>
+      <pre id="draft" class="muted">Nothing streamed yet.</pre>
+
+      <h3>Catalog matches</h3>
+      <ul id="matches"><li class="muted">None yet.</li></ul>
+
+      <h3>Reviewer feedback</h3>
+      <ul id="feedback"><li class="muted">None yet.</li></ul>
+
+      <h3>Model calls</h3>
+      <table>
+        <thead><tr><th>Agent</th><th>Attempt</th><th>Outcome</th><th>Seconds</th></tr></thead>
+        <tbody id="trace"><tr><td colspan="4" class="muted">No calls yet.</td></tr></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
