@@ -6,3 +6,4 @@ data/
 *.sqlite-journal
 *.sqlite-wal
 *.sqlite-shm
+*.egg-info/

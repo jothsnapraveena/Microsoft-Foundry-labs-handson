@@ -3,5 +3,16 @@ fastapi==0.142.2
 uvicorn==0.54.0
 pydantic==2.13.5
 PyJWT[crypto]==2.15.1
+# Azure sign-in and the Foundry project client (scripts/check_azure.py; stage 3 onward).
+azure-identity==1.26.0
+azure-ai-projects==2.7.0
+# PREVIEW: knowledge sources, knowledge bases and the retrieval filter need this beta (REST API 2026-08-01-preview).
+azure-search-documents==12.1.0b2
+# Tracing: OpenTelemetry spans exported to Application Insights.
+opentelemetry-api==1.44.0
+opentelemetry-sdk==1.44.0
+azure-monitor-opentelemetry==1.8.10
+# Evaluation: model-graded metrics and publishing runs to Foundry.
+azure-ai-evaluation==1.18.7
 # Test client for the HTTP tests.
 httpx2==2.13.1

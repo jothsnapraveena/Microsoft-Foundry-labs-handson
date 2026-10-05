@@ -3,6 +3,7 @@ from fastapi import Depends, FastAPI, Header, HTTPException, Request
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt
 
+from . import telemetry
 from .auth import CUSTOMER_CHANNEL, AuthError, Identity, build_authenticator
 from .config import Clock, Settings
 from .eligibility import ReturnRequest
@@ -68,7 +69,8 @@ def create_app(settings=None, service=None, authenticator=None):
             raise HTTPException(401, "Not authenticated")
 
     def trace(traceparent: str | None = Header(default=None)):
-        return trace_id_from(traceparent)
+        # Prefer the active span, so audit rows join to exported traces; fall back to the caller's header.
+        return telemetry.current_trace_id() or trace_id_from(traceparent)
 
     for error, status in ((NotFound, 404), (Conflict, 409), (InvalidConfirmation, 403), (ValueError, 422)):
         app.add_exception_handler(error, lambda request, exc, status=status: JSONResponse({"detail": str(exc)}, status))

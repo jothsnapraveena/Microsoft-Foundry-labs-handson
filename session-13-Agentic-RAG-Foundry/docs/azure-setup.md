@@ -157,6 +157,28 @@ Copy `.env.example` to `.env` and set the endpoints and deployment names. `.env`
 | `AZURE_OPENAI_ENDPOINT` | Foundry resource → Endpoints |
 | `AZURE_OPENAI_EMBEDDING_DEPLOYMENT` | The embedding deployment name from step 3 |
 | `AGENT_MODEL` | The chat deployment name from step 3 |
+| `PROJECT_RESOURCE_ID` | Foundry project → Properties → Resource ID. Needed only for the portal agent |
+
+## 9. Run the preflight check
+
+With the CLI signed in and `.env` filled in:
+
+```powershell
+python scripts/check_azure.py
+```
+
+It signs in with your Azure CLI login and makes one small read or call per resource. It creates and deletes nothing; the two model calls cost a fraction of a cent.
+
+| Check | What a PASS shows |
+|---|---|
+| Sign-in | `az login` works and tokens can be issued |
+| Search service access | The endpoint is right, role-based access is on, and you hold a search role |
+| Agentic retrieval | The service exposes knowledge bases (a WARN here means the region, tier or API version needs a look) |
+| Embedding deployment | The deployment name is right and you can call it |
+| Chat deployment | The deployment name is right and you can call it |
+| Foundry project | The project endpoint is right and you can list agents |
+
+It cannot check the permissions that one Azure service uses to call another: the search service calling the models, the project reading the index, creating the project connection, and reading traces. Those are exercised in stage 3; verify them on each resource's IAM page in the meantime (step 7).
 
 ## Troubleshooting
 

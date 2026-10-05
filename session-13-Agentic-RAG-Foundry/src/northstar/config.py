@@ -38,6 +38,61 @@ class Settings:
         )
 
 
+def load_env_file(path=PROJECT_ROOT / ".env"):
+    """Read KEY=VALUE lines into the environment without overriding variables already set."""
+    path = Path(path)
+    if not path.exists():
+        return False
+    for line in path.read_text(encoding="utf-8").splitlines():
+        key, separator, value = line.partition("=")
+        if separator and not key.strip().startswith("#"):
+            os.environ.setdefault(key.strip(), value.strip().strip('"'))
+    return True
+
+
+def use_utf8_output():
+    """Model answers contain characters the default Windows console encoding cannot print."""
+    import sys
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, "reconfigure"):
+            stream.reconfigure(encoding="utf-8", errors="replace")
+
+
+@dataclass(frozen=True)
+class AzureSettings:
+    """Azure resources for retrieval. Endpoints and names only; sign-in is by Azure credential, never keys."""
+    search_endpoint: str
+    openai_endpoint: str
+    project_endpoint: str
+    embedding_deployment: str
+    embedding_model: str
+    planning_deployment: str        # model the knowledge base uses to plan queries
+    planning_model: str
+    agent_model: str
+    index_name: str
+    knowledge_source_name: str
+    knowledge_base_name: str
+
+    @classmethod
+    def from_env(cls, env=os.environ):
+        def required(name):
+            value = env.get(name, "").strip().rstrip("/")
+            if not value or "<" in value:
+                raise ValueError(f"{name} is not set. Fill it in .env (see docs/azure-setup.md).")
+            return value
+        embedding = required("AZURE_OPENAI_EMBEDDING_DEPLOYMENT")
+        agent = required("AGENT_MODEL")
+        planning = env.get("KNOWLEDGE_BASE_MODEL_DEPLOYMENT", agent)
+        return cls(
+            search_endpoint=required("AZURE_SEARCH_ENDPOINT"), openai_endpoint=required("AZURE_OPENAI_ENDPOINT"),
+            project_endpoint=required("PROJECT_ENDPOINT"), embedding_deployment=embedding,
+            embedding_model=env.get("AZURE_OPENAI_EMBEDDING_MODEL", embedding),
+            planning_deployment=planning, planning_model=env.get("KNOWLEDGE_BASE_MODEL", planning), agent_model=agent,
+            index_name=env.get("AZURE_SEARCH_INDEX", "northstar-policies"),
+            knowledge_source_name=env.get("AZURE_SEARCH_KNOWLEDGE_SOURCE", "northstar-policies-ks"),
+            knowledge_base_name=env.get("AZURE_SEARCH_KNOWLEDGE_BASE", "northstar-policies-kb"))
+
+
 class Clock:
     """Business date and wall-clock time. Eligibility uses the date; expiry and audit use the time."""
     def __init__(self, fixed_date=None, now=None):
