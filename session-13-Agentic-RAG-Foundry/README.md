@@ -4,6 +4,12 @@ A retail support agent for the fictional Northstar Retail. Azure AI Search agent
 
 The build follows [instruction.md](instruction.md) in stages. This README states what exists now.
 
+## Architecture
+
+![Architecture: the policy agent loop, Microsoft Foundry, Azure AI Search and Application Insights](docs/architecture.svg)
+
+Details are in [docs/architecture.md](docs/architecture.md).
+
 ## Status
 
 | Stage | What | State |

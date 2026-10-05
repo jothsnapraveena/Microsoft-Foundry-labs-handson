@@ -5,6 +5,7 @@
   python -m northstar.evals.portal traffic --confirm      Ask the portal agent sample questions, to fill Traces and Monitor.
   python -m northstar.evals.portal agent-run --confirm    Foundry runs the portal agent on the questions and grades it.
   python -m northstar.evals.portal dataset-run --confirm  Foundry grades saved answers on the RAG metrics (no agent calls).
+  python -m northstar.evals.portal labels-run --confirm   Show the label-based retrieval and citation metrics in Foundry (no model).
   python -m northstar.evals.portal remove --confirm       Delete the continuous evaluation rules.
 
 Everything here targets one agent, the portal agent, because Foundry can run it by itself and
@@ -36,6 +37,10 @@ DATASET_GRADERS = {
     "similarity": ("query", "response", "ground_truth"),
     "coherence": ("query", "response"),
 }
+# Label-based metrics computed by evals/policy_agent.py. Foundry displays them through code graders that
+# return the stored value; nothing is recomputed there and no model is called.
+LABEL_METRICS = ("retrieval_recall", "retrieval_mrr", "retrieval_ndcg", "citation_precision", "citation_recall")
+LABEL_PASS_MARK = 0.5   # Foundry needs a pass mark to colour rows. This one is for display, not a release gate.
 RULE_PREFIX = "northstar-continuous-"
 TRAFFIC = [
     "How many days do I have to return headphones I changed my mind about?",
@@ -140,9 +145,33 @@ def run_dataset_evaluation(project, judge, rows, name, poll_seconds=10, timeout_
     return evaluation.id, run
 
 
-def latest_answers(data_dir):
+def run_label_evaluation(project, rows, name, poll_seconds=10, timeout_seconds=900, progress=print):
+    """Publish metrics that were already computed from the dataset's labels. Unanswerable questions have none and are left out."""
+    client = project.get_openai_client()
+    rows = [row for row in rows if all(row.get(metric) is not None for metric in LABEL_METRICS)]
+    text_fields = ("qa_id", "type", "query", "response", "expected", "retrieved", "cited")
+    properties = {**{field: {"type": "string"} for field in text_fields}, **{metric: {"type": "number"} for metric in LABEL_METRICS}}
+    evaluation = client.evals.create(
+        name=name, data_source_config={"type": "custom", "item_schema": {
+            "type": "object", "properties": properties, "required": list(properties)}},
+        testing_criteria=[{"type": "python", "name": metric, "pass_threshold": LABEL_PASS_MARK,
+                           "source": f"def grade(sample, item):\n    return float(item['{metric}'])\n"} for metric in LABEL_METRICS])
+    content = [{"item": {"qa_id": row["qa_id"], "type": row["type"], "query": row["query"], "response": row["response"],
+                         "expected": ", ".join(row["expected_chunk_ids"]), "retrieved": ", ".join(row["retrieved_chunk_ids"]),
+                         "cited": ", ".join(row["citations"]), **{metric: row[metric] for metric in LABEL_METRICS}}} for row in rows]
+    run = client.evals.runs.create(eval_id=evaluation.id, name=f"{name} ({len(rows)} answerable questions)",
+                                   data_source={"type": "jsonl", "source": {"type": "file_content", "content": content}})
+    deadline = time.monotonic() + timeout_seconds
+    while run.status not in ("completed", "failed", "canceled") and time.monotonic() < deadline:
+        time.sleep(poll_seconds)
+        run = client.evals.runs.retrieve(run_id=run.id, eval_id=evaluation.id)
+        progress(f"  status: {run.status}")
+    return evaluation.id, run
+
+
+def latest_answers(data_dir, name="portal_dataset.jsonl"):
     """The most recent answers file written by evals/policy_agent.py."""
-    files = sorted(data_dir.glob("eval/*/portal_dataset.jsonl"))
+    files = sorted(data_dir.glob(f"eval/*/{name}"))
     if not files:
         raise ValueError("No saved answers found. Run python -m northstar.evals.policy_agent --confirm first, or pass --rows.")
     return files[-1]
@@ -167,13 +196,13 @@ def run(argv=None):
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     commands = parser.add_subparsers(dest="command", required=True)
     commands.add_parser("status")
-    for name in ("continuous", "traffic", "agent-run", "dataset-run", "remove"):
+    for name in ("continuous", "traffic", "agent-run", "dataset-run", "labels-run", "remove"):
         sub = commands.add_parser(name)
         sub.add_argument("--confirm", action="store_true", help="Required: this changes the project or makes billed calls")
         if name == "traffic":
             sub.add_argument("--count", type=int, default=len(TRAFFIC))
-        if name == "dataset-run":
-            sub.add_argument("--rows", help="Answers file (portal_dataset.jsonl). Default: the latest under data/eval")
+        if name in ("dataset-run", "labels-run"):
+            sub.add_argument("--rows", help="Answers file written by evals/policy_agent.py. Default: the latest under data/eval")
             sub.add_argument("--limit", type=int)
         if name == "agent-run":
             sub.add_argument("--limit", type=int)
@@ -204,10 +233,14 @@ def run(argv=None):
         print(f"Foundry is running '{agent}' on {len(questions)} questions and grading with {judge}...")
         evaluation_id, result = run_agent_evaluation(project, judge, questions, agent)
         return report(evaluation_id, result)
-    elif args.command == "dataset-run":
+    elif args.command in ("dataset-run", "labels-run"):
         from pathlib import Path
-        path = Path(args.rows) if args.rows else latest_answers(settings.dataset_dir.parent / "data")
+        default_name = "rows.jsonl" if args.command == "labels-run" else "portal_dataset.jsonl"
+        path = Path(args.rows) if args.rows else latest_answers(settings.dataset_dir.parent / "data", default_name)
         rows = [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line.strip()][:args.limit]
+        if args.command == "labels-run":
+            print(f"Publishing label-based metrics from {path} to Foundry (no model calls)...")
+            return report(*run_label_evaluation(project, rows, "Northstar policy agent: retrieval and citation metrics"))
         print(f"Foundry is grading {len(rows)} saved answers from {path} with {judge}...")
         return report(*run_dataset_evaluation(project, judge, rows, "Northstar policy agent: RAG metrics"))
     else:
