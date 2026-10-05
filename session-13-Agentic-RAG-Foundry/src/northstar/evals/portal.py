@@ -4,6 +4,7 @@
   python -m northstar.evals.portal continuous --confirm   Grade every new response of the portal agent, as it happens.
   python -m northstar.evals.portal traffic --confirm      Ask the portal agent sample questions, to fill Traces and Monitor.
   python -m northstar.evals.portal agent-run --confirm    Foundry runs the portal agent on the questions and grades it.
+  python -m northstar.evals.portal dataset-run --confirm  Foundry grades saved answers on the RAG metrics (no agent calls).
   python -m northstar.evals.portal remove --confirm       Delete the continuous evaluation rules.
 
 Everything here targets one agent, the portal agent, because Foundry can run it by itself and
@@ -26,6 +27,15 @@ from ..config import AzureSettings, Settings, load_env_file, use_utf8_output
 
 # Graders that need only the question and the response. Each scores 1 to 5 using the judge model.
 QUALITY_GRADERS = ("coherence", "fluency", "relevance", "intent_resolution", "task_adherence")
+# Graders for saved answers: each row already holds the question, answer, retrieved evidence and expected answer.
+DATASET_GRADERS = {
+    "groundedness": ("query", "response", "context"),
+    "retrieval": ("query", "context"),
+    "relevance": ("query", "response"),
+    "response_completeness": ("response", "ground_truth"),
+    "similarity": ("query", "response", "ground_truth"),
+    "coherence": ("query", "response"),
+}
 RULE_PREFIX = "northstar-continuous-"
 TRAFFIC = [
     "How many days do I have to return headphones I changed my mind about?",
@@ -108,6 +118,45 @@ def run_agent_evaluation(project, judge, questions, agent, poll_seconds=10, time
     return evaluation.id, run
 
 
+def run_dataset_evaluation(project, judge, rows, name, poll_seconds=10, timeout_seconds=1500, progress=print):
+    """Have Foundry grade answers that were already collected. Only the judge model is called."""
+    from azure.ai.projects.models import TestingCriterionAzureAIEvaluator
+    client = project.get_openai_client()
+    fields = ("query", "response", "context", "ground_truth")
+    evaluation = client.evals.create(
+        name=name,
+        data_source_config={"type": "custom", "item_schema": {
+            "type": "object", "properties": {field: {"type": "string"} for field in fields}, "required": list(fields)}},
+        testing_criteria=[TestingCriterionAzureAIEvaluator(
+            type="azure_ai_evaluator", name=grader, evaluator_name=f"builtin.{grader}", initialization_parameters={"model": judge},
+            data_mapping={field: "{{item." + field + "}}" for field in inputs}) for grader, inputs in DATASET_GRADERS.items()])
+    run = client.evals.runs.create(eval_id=evaluation.id, name=f"{name} ({len(rows)} answers)", data_source={
+        "type": "jsonl", "source": {"type": "file_content", "content": [{"item": {field: row[field] for field in fields}} for row in rows]}})
+    deadline = time.monotonic() + timeout_seconds
+    while run.status not in ("completed", "failed", "canceled") and time.monotonic() < deadline:
+        time.sleep(poll_seconds)
+        run = client.evals.runs.retrieve(run_id=run.id, eval_id=evaluation.id)
+        progress(f"  status: {run.status}")
+    return evaluation.id, run
+
+
+def latest_answers(data_dir):
+    """The most recent answers file written by evals/policy_agent.py."""
+    files = sorted(data_dir.glob("eval/*/portal_dataset.jsonl"))
+    if not files:
+        raise ValueError("No saved answers found. Run python -m northstar.evals.policy_agent --confirm first, or pass --rows.")
+    return files[-1]
+
+
+def report(evaluation_id, result):
+    print(f"Evaluation {evaluation_id}, run {result.id}: {result.status}")
+    print(f"Result counts: {getattr(result, 'result_counts', None)}")
+    for item in getattr(result, "per_testing_criteria_results", None) or []:
+        print(f"  {item.testing_criteria}: passed {item.passed}, failed {item.failed}")
+    print(f"Report: {getattr(result, 'report_url', None) or 'open Evaluations in the Foundry portal'}")
+    return 0 if result.status == "completed" else 1
+
+
 def status(project):
     return {"continuous_rules": [{"id": rule.id, "enabled": rule.enabled} for rule in project.evaluation_rules.list()
                                  if rule.id.startswith(RULE_PREFIX)],
@@ -118,11 +167,14 @@ def run(argv=None):
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     commands = parser.add_subparsers(dest="command", required=True)
     commands.add_parser("status")
-    for name in ("continuous", "traffic", "agent-run", "remove"):
+    for name in ("continuous", "traffic", "agent-run", "dataset-run", "remove"):
         sub = commands.add_parser(name)
         sub.add_argument("--confirm", action="store_true", help="Required: this changes the project or makes billed calls")
         if name == "traffic":
             sub.add_argument("--count", type=int, default=len(TRAFFIC))
+        if name == "dataset-run":
+            sub.add_argument("--rows", help="Answers file (portal_dataset.jsonl). Default: the latest under data/eval")
+            sub.add_argument("--limit", type=int)
         if name == "agent-run":
             sub.add_argument("--limit", type=int)
             sub.add_argument("--split", choices=("development", "test", "all"), default="development")
@@ -151,12 +203,13 @@ def run(argv=None):
         agent = monitored_agent()
         print(f"Foundry is running '{agent}' on {len(questions)} questions and grading with {judge}...")
         evaluation_id, result = run_agent_evaluation(project, judge, questions, agent)
-        print(f"Evaluation {evaluation_id}, run {result.id}: {result.status}")
-        print(f"Result counts: {getattr(result, 'result_counts', None)}")
-        for item in getattr(result, "per_testing_criteria_results", None) or []:
-            print(f"  {item.testing_criteria}: passed {item.passed}, failed {item.failed}")
-        print(f"Report: {getattr(result, 'report_url', None) or 'open Evaluations in the Foundry portal'}")
-        return 0 if result.status == "completed" else 1
+        return report(evaluation_id, result)
+    elif args.command == "dataset-run":
+        from pathlib import Path
+        path = Path(args.rows) if args.rows else latest_answers(settings.dataset_dir.parent / "data")
+        rows = [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line.strip()][:args.limit]
+        print(f"Foundry is grading {len(rows)} saved answers from {path} with {judge}...")
+        return report(*run_dataset_evaluation(project, judge, rows, "Northstar policy agent: RAG metrics"))
     else:
         removed = []
         for rule in list(project.evaluation_rules.list()):
