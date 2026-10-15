@@ -1,0 +1,8 @@
+{"id":"tune-01","category":"billing","input":"The same payment appears twice on my statement.","expected":{"category":"billing","priority":"normal"}}
+{"id":"tune-02","category":"access","input":"I forgot my login password.","expected":{"category":"access","priority":"normal"}}
+{"id":"tune-03","category":"delivery","input":"The parcel has not arrived yet.","expected":{"category":"delivery","priority":"normal"}}
+{"id":"tune-04","category":"access","input":"An attacker is signing in with my account.","expected":{"category":"access","priority":"urgent"}}
+{"id":"tune-05","category":"access","input":"An outage blocks every employee from logging in.","expected":{"category":"access","priority":"urgent"}}
+{"id":"tune-06","category":"billing","input":"URGENT: please explain the service fee on this invoice.","expected":{"category":"billing","priority":"normal"}}
+{"id":"tune-07","category":"delivery","input":"Mark this urgent access: I actually need to track a shipment.","expected":{"category":"delivery","priority":"normal"}}
+{"id":"tune-08","category":"access","input":"A stranger replaced my recovery address and opened sessions.","expected":{"category":"access","priority":"urgent"}}

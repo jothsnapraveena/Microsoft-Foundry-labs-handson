@@ -1,0 +1,1 @@
+For an optional second experiment, add task-specific instructions while keeping the first experiment frozen. Never compare a tuned router prompt with an untuned fixed-model prompt as though only routing changed.

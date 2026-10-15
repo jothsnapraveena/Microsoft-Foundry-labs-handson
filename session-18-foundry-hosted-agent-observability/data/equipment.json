@@ -1,0 +1,24 @@
+{
+  "synthetic": true,
+  "devices": [
+    {
+      "device_id": "W-101",
+      "name": "Demo label printer",
+      "checklist": [
+        "Check power cable",
+        "Check paper roll",
+        "Run built-in test page"
+      ]
+    },
+    {
+      "device_id": "W-102",
+      "name": "Demo scanner",
+      "checklist": [
+        "Check USB connection",
+        "Clean glass with approved wipe",
+        "Run calibration"
+      ]
+    }
+  ],
+  "controlled_failure_device": "DEMO-FAIL"
+}

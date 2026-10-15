@@ -1,0 +1,1 @@
+For the recovery version keep the same model and instructions. Change application error handling so the controlled error is mapped to an honest failure message and safe diagnostic code; do not make failed tool responses appear successful.

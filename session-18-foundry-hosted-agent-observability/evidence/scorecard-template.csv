@@ -1,0 +1,9 @@
+case_id,variant,attempt,target_version,run_id,status,expected_summary,observed_summary,pass,latency_ms,input_tokens,output_tokens,estimated_cost_usd,review_notes
+host-01,baseline,1,,,,,,,,,,,
+host-02,baseline,1,,,,,,,,,,,
+host-03,baseline,1,,,,,,,,,,,
+host-04,baseline,1,,,,,,,,,,,
+host-05,baseline,1,,,,,,,,,,,
+host-06,baseline,1,,,,,,,,,,,
+host-07,baseline,1,,,,,,,,,,,
+host-08,baseline,1,,,,,,,,,,,

@@ -1,0 +1,13 @@
+{
+  "price_date": null,
+  "currency": "USD",
+  "note": "Enter official dated rates and verified response-model billing matches; unknown stays null. Do not treat token count as a bill.",
+  "models": {
+    "replace-with-verified-response-model": {
+      "verified_billing_match": false,
+      "input_per_million": 0,
+      "output_per_million": 0,
+      "cached_input_per_million": 0
+    }
+  }
+}

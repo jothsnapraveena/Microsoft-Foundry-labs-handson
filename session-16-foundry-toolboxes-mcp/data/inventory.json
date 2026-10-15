@@ -1,0 +1,21 @@
+{
+  "synthetic": true,
+  "snapshot_utc": "2026-10-15T12:00:00Z",
+  "products": [
+    {
+      "sku": "J-101",
+      "name": "Demo cordless drill",
+      "available_quantity": 12
+    },
+    {
+      "sku": "J-102",
+      "name": "Demo interior paint",
+      "available_quantity": 0
+    },
+    {
+      "sku": "J-103",
+      "name": "Demo safety goggles",
+      "available_quantity": 25
+    }
+  ]
+}

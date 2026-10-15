@@ -1,0 +1,8 @@
+{"id":"route-01","category":"classification","input":"Classify: My invoice has a duplicate charge.","expected":{"category":"billing","priority":"normal"}}
+{"id":"route-02","category":"classification","input":"Classify: Someone took over my account.","expected":{"category":"access","priority":"urgent"}}
+{"id":"route-03","category":"classification","input":"Classify: My package is late.","expected":{"category":"delivery","priority":"normal"}}
+{"id":"route-04","category":"classification","input":"Classify: Nobody in our organization can sign in due to an outage.","expected":{"category":"access","priority":"urgent"}}
+{"id":"route-05","category":"extraction","input":"Extract order_id and amount_usd as JSON: Order B-104 was charged USD 42.","expected":{"order_id":"B-104","amount_usd":42}}
+{"id":"route-06","category":"extraction","input":"Extract order_id and amount_usd as JSON; missing values must be null: Order B-105 has a charge dispute.","expected":{"order_id":"B-105","amount_usd":null}}
+{"id":"route-07","category":"explanation","input":"Policy: standard delivery takes 3?5 business days after dispatch. Explain whether arrival in two calendar days is guaranteed.","expected":"No guarantee; distinguish business days and dispatch."}
+{"id":"route-08","category":"explanation","input":"Policy: contact billing for invoice disputes. What is the refund deadline?","expected":"Deadline is not supplied; do not invent one."}

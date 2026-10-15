@@ -1,0 +1,1 @@
+For the skill-enabled variants, retain the baseline agent instructions and attach exactly one pinned ticket-triage skill version. Do not copy the skill body into the baseline, which would invalidate the comparison.

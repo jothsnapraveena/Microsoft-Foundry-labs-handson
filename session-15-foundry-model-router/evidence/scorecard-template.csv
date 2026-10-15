@@ -1,0 +1,9 @@
+case_id,variant,attempt,target_version,run_id,status,expected_summary,observed_summary,pass,latency_ms,input_tokens,output_tokens,estimated_cost_usd,review_notes
+route-01,baseline,1,,,,,,,,,,,
+route-02,baseline,1,,,,,,,,,,,
+route-03,baseline,1,,,,,,,,,,,
+route-04,baseline,1,,,,,,,,,,,
+route-05,baseline,1,,,,,,,,,,,
+route-06,baseline,1,,,,,,,,,,,
+route-07,baseline,1,,,,,,,,,,,
+route-08,baseline,1,,,,,,,,,,,

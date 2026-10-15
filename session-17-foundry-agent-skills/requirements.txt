@@ -1,0 +1,4 @@
+azure-ai-projects==2.8.0
+azure-identity==1.26.0
+openai==3.31.0
+python-dotenv==1.2.4

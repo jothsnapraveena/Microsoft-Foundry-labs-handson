@@ -135,3 +135,7 @@ It is to build a clear, practical, and project-ready understanding of Microsoft 
 ## License
 
 MIT
+
+## Independent implementation labs: Sessions 14?19
+
+[Implementation status and run guides](sessions-14-19-implementation.md) cover agent security, Model Router evaluation, Toolboxes/MCP, versioned skills, hosted-agent observability and supervised fine-tuning. All six include code and local tests; live Azure validation remains separate.

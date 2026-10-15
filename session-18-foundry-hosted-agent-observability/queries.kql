@@ -1,0 +1,11 @@
+// Run in the connected Application Insights resource; exporter table mapping may vary.
+dependencies
+| where timestamp > ago(1d)
+| where name in ("willow.answer", "execute_tool get_checklist", "gen_ai.chat")
+| project timestamp, name, duration, success, operation_Id, customDimensions
+| order by timestamp desc
+
+dependencies
+| where timestamp > ago(1d)
+| where tostring(customDimensions["error.type"]) == "DEMO_LOOKUP_FAILURE"
+| project timestamp, operation_Id, name, customDimensions
