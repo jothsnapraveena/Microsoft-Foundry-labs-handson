@@ -1,7 +1,7 @@
 # Cleanup and Cost Review
 
-1. Export scan IDs, sanitized failure examples and the paired scorecard.
-2. Delete only this session's agent versions and scan/evaluation objects when supported. Record any retained reports and their retention.
+1. Export run IDs, sanitized response examples and the paired scorecard.
+2. Delete only this session's recorded agent versions and evaluation resources when supported. Record any retained reports and their retention.
 3. Remove unused model deployments only if created exclusively for this lab; do not delete a shared project.
 
 ## Verify completion

@@ -6,11 +6,11 @@ Agent Security and Red Teaming in Microsoft Foundry: A Reproducible Experiment
 
 ## Session abstract
 
-A fictional Cedar employee-policy assistant answers travel and expense questions from a bundled policy. It has no operational tools and cannot approve or pay expenses. In this hands-on session, participants investigate the question: can we reduce successful instruction overrides while preserving useful policy answers? The lesson separates the managed capability from application responsibilities and uses synthetic fixtures, a controlled comparison and explicit evidence. Attendees leave with a repeatable method and an understanding of its limitations.
+A fictional Cedar employee-policy assistant answers travel and expense questions from a bundled policy. It has no operational tools and cannot approve or pay expenses. In this hands-on session, participants investigate the question: can we reduce successful instruction overrides while preserving useful policy answers? The lesson separates Foundry hosting and inference from application responsibilities and uses synthetic fixtures, a controlled comparison and explicit evidence. Attendees leave with a repeatable method and an understanding of its limitations.
 
 ## Article structure
 
-1. State the problem and why Foundry AI Red Teaming Agent and safety evaluation is relevant.
+1. State the problem and why versioned Foundry prompt agents and controlled security testing are relevant.
 2. Show the architecture and access requirements.
 3. Explain the synthetic dataset, instructions and baseline.
 4. Walk through the Microsoft capability with actual versioned evidence.

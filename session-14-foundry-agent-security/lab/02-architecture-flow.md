@@ -3,13 +3,13 @@
 ```mermaid
 flowchart LR
     A["Policy and variant instructions"] --> B["Standalone Foundry prompt agent"]
-    B --> C["Fixed tests and managed red-team scan"]
-    C --> D["Separate scorecards and reviewed findings"]
+    B --> C["Fixed legitimate and adversarial tests"]
+    C --> D["Saved responses and reviewed findings"]
 ```
 
 ## Layer boundaries
 
-Microsoft supplies agent hosting, automated adversarial testing and available safety controls. Our policy text, attack labels, disclosure checks and acceptance criteria are application content. A system-prompt marker is a teaching canary, never a place to store a real secret.
+Microsoft supplies agent hosting, model inference and available safety controls. Our policy text, attack labels, disclosure checks and acceptance criteria are application content. A system-prompt marker is a teaching canary, never a place to store a real secret.
 
 The fixture files are synthetic test inputs. The expected field records a grading target and must not be included in the user input being evaluated. Keep evaluator labels separate from prompts sent to the system under test.
 
@@ -31,4 +31,4 @@ Every required application artifact belongs to this session. A shared Azure proj
 
 ## Limits of the diagram
 
-The arrows describe the lesson's logical flow, not a claim that Microsoft automatically provisions each component. Cloud scan availability and risk/target support must be checked in the chosen project; this content does not assert that every attack objective has a dedicated built-in evaluator.
+The arrows describe the lesson's logical flow, not a claim that Microsoft automatically provisions each component.

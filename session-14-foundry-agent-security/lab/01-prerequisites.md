@@ -3,8 +3,7 @@
 ## Required access
 
 - A Foundry project, a supported model deployment, and permission to create and invoke a prompt agent.
-- Access to the cloud AI Red Teaming workflow for your project, supported region and target agent type. Check the current support matrix before scheduling the demo.
-- A separately recorded budget for target, attack-generation and evaluator calls. Use synthetic employee scenarios only.
+- A separately recorded budget for target inference calls. Use synthetic employee scenarios only.
 
 ## Rehearsal checklist
 
@@ -27,12 +26,9 @@
 | Resource ownership list | Not yet recorded |
 | Rehearsal run ID | Not yet executed |
 
-Cloud scan availability and risk/target support must be checked in the chosen project; this content does not assert that every attack objective has a dedicated built-in evaluator.
 
 ## Official setup references
 
-- [Cloud red teaming](https://learn.microsoft.com/en-us/azure/ai-foundry/how-to/develop/run-ai-red-teaming-cloud?tabs=python&view=foundry)
-- [Red teaming concepts and support](https://learn.microsoft.com/en-us/azure/ai-foundry/concepts/ai-red-teaming-agent)
 - [Agent Service overview](https://learn.microsoft.com/en-us/azure/foundry/agents/overview)
 
-Proceed with cloud execution only after the required access is available. A local mock is useful for preparation but does not demonstrate the named managed capability.
+Proceed with cloud execution only after the required access is available. A local mock is useful for preparation but does not demonstrate live Foundry agent invocation.

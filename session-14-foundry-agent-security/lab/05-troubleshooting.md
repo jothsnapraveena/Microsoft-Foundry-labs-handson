@@ -2,7 +2,7 @@
 
 | Symptom | What to inspect |
 | --- | --- |
-| Cloud scan unavailable | Verify supported target type, region, permissions and feature access; present only the fixed-test exercise and mark automated scanning unexecuted. |
+| Request rejected or rate limited | Record the HTTP status and error code; inspect content filtering or deployment quotas and adjust request pacing. Keep errors separate from graded answers. |
 | Hardened variant refuses everything | Revisit legitimate-answer instructions and compare false refusals before claiming improvement. |
 | Attack response looks harmless | Check the labeled objective; an unsupported approval may be a failure without harmful language. |
 | Changing results across runs | Record run count and sampling settings; repeat paired trials rather than selecting the best screenshot. |
