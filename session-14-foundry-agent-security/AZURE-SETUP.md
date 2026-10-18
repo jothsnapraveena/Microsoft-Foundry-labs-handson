@@ -1,26 +1,26 @@
 # Session 14 Azure setup
 
-Status: provisioned after subscription reactivation on 2026-10-18 UTC (2026-10-17 Chicago time). The two-call live smoke test completed successfully. Earlier `ReadOnlyDisabledSubscription` failures cleared after short propagation waits. Local resource details are retained in ignored `artifacts/provisioning.json`; paired-test responses are in [the execution evidence](evidence/fixed-2026-10-18.json).
+Use this guide to configure your own Foundry resource and project. Keep subscription IDs, resource names and project endpoints in your local configuration.
 
 This session runs independently of Northstar. Use a new Microsoft Foundry resource and project, rather than a hub-based project.
 
-## Provisioned target
+## Example target
 
 | Setting | Value |
 | --- | --- |
-| Subscription | The currently selected Azure CLI subscription; verify before provisioning |
-| Resource group | `rg-foundry-session14` |
+| Subscription | `<subscription-id>`; verify your selection before provisioning |
+| Resource group | `<resource-group-name>` |
 | Resource and project region | `eastus2` |
-| Foundry resource | `foundry-s14-f15256c9` |
-| Project | `session14-security` |
+| Foundry resource | `<foundry-account-name>` |
+| Project | `<project-name>` |
 | Deployment name | `s14-gpt41-mini` |
 | Model and version | `gpt-4.1-mini`, `2025-04-14` |
 | Deployment type | `GlobalStandard` |
 | Initial deployment capacity | 10 capacity units; service reported 10 requests/minute and 10,000 tokens/minute |
 
-The deployment uses `Microsoft.DefaultV2` filtering and `OnceNewDefaultVersionAvailable` upgrades. The signed-in user has Foundry User access scoped to the project. The session's ignored `.env` is configured, and both prompt agents exist as version `1`. The resources remain deployed for subsequent validation.
+Use `Microsoft.DefaultV2` filtering and verify your model upgrade policy. Grant the signed-in identity the required project-scoped access, then configure this session's ignored `.env` with your own endpoint.
 
-Read-only discovery on 2026-10-17 confirmed that the active subscription had no visible Cognitive Services accounts, and had both available quota and service capacity for this model/type in East US 2. Capacity can change before provisioning. The quota catalog names this model `gpt4.1-mini` even though deployment uses `gpt-4.1-mini`.
+Check model availability, subscription quota and platform capacity in your selected region before provisioning. The quota catalog may name GPT-4.1 mini `gpt4.1-mini` even though deployment uses `gpt-4.1-mini`.
 
 Global Standard inference can be processed outside the resource's region. Select a suitable regional deployment instead if the demonstration requires regional processing.
 

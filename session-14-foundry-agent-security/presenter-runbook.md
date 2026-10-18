@@ -30,7 +30,7 @@ Open with this scenario: A fictional Cedar employee-policy assistant answers tra
 
 ## Long-running or unavailable operations
 
-Rehearse provisioning and the paired tests in advance. Save genuine dated output and a screen recording. If a live operation is queued, label saved results as a prior rehearsal. If access was never obtained, show only the design and mark that capability unexecuted.
+Rehearse provisioning and the paired tests in advance. Save genuine dated output and a screen recording. If a live operation is queued, label saved results as a prior rehearsal. For a design walkthrough, label the material as an architectural example.
 
 Do not promise that all eight fixtures will pass or that an optimization will improve quality. The session remains useful when the measurements reveal a regression.
 

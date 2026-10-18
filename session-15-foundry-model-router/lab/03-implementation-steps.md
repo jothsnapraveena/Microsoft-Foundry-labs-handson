@@ -39,4 +39,4 @@ Start with [the blank scorecard](../evidence/scorecard-template.csv). Record one
 - [Model Router guide](https://learn.microsoft.com/en-us/azure/foundry/openai/how-to/model-router)
 - [Evaluation overview](https://learn.microsoft.com/en-us/azure/foundry/observability/how-to/evaluate-agent)
 
-If a capability is unavailable in your subscription, keep the corresponding step explicitly unexecuted. Describe the access limitation rather than substituting a local implementation under the Microsoft feature's name.
+Use the named Microsoft capability for the relevant exercise and record the configuration and outputs in your run report.

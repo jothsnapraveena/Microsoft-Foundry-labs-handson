@@ -14,4 +14,4 @@ Complete the following sequence:
 
 Use [the supplied fixtures](../data/cases.jsonl), [baseline instructions](../assets/baseline-instructions.md), and [comparison instructions](../assets/hardened-instructions.md). The latter filename means the second experimental condition; in some sessions the change is configuration or application behavior rather than a stronger prompt.
 
-Success requires an actual Microsoft capability demonstration and independently reviewable observations. Reading this lesson or filling a scorecard with expected outputs does not establish execution. If access is unavailable, use a clearly labeled design walkthrough and leave live evidence unexecuted.
+Success requires an actual Microsoft capability demonstration and independently reviewable observations. Reading this lesson or filling a scorecard with expected outputs does not establish execution.

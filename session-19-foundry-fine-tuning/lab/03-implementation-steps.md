@@ -39,4 +39,4 @@ Start with [the blank scorecard](../evidence/scorecard-template.csv). Record one
 - [Supervised fine-tuning guide](https://learn.microsoft.com/en-us/azure/foundry/openai/how-to/fine-tuning)
 - [Fine-tuning considerations](https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/fine-tuning-considerations)
 
-If a capability is unavailable in your subscription, keep the corresponding step explicitly unexecuted. Describe the access limitation rather than substituting a local implementation under the Microsoft feature's name.
+Use the named Microsoft capability for the relevant exercise and record the configuration and outputs in your run report.

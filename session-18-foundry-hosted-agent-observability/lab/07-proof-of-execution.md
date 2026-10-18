@@ -1,23 +1,23 @@
 # Proof of Execution
 
-Azure status: **Not executed.** Local application tests are implemented; record their results separately from live service evidence. Replace the Azure status only after capturing actual Azure evidence.
+Use this template to record execution details, observations and measurements for your run.
 
 ## Reproduction record
 
 | Field | Recorded value |
 | --- | --- |
-| Execution date and presenter | Pending |
-| Feature status and region | Pending |
-| SDK versions and sample/source commit | Pending |
-| Target/model/agent versions | Pending |
-| Dataset revision or SHA-256 | Pending |
-| Instructions/configuration variants | Pending |
-| Service job/run/correlation identifiers | Pending |
-| Attempts / completions / graded cases | Pending |
-| Metrics and denominators | Pending |
-| Estimated/actual costs and assumptions | Pending |
-| Sanitized output or trace links | Pending |
-| Cleanup verification | Pending |
+| Execution date and presenter | |
+| Feature status and region | |
+| SDK versions and sample/source commit | |
+| Target/model/agent versions | |
+| Dataset revision or SHA-256 | |
+| Instructions/configuration variants | |
+| Service job/run/correlation identifiers | |
+| Attempts / completions / graded cases | |
+| Metrics and denominators | |
+| Estimated/actual costs and assumptions | |
+| Sanitized output or trace links | |
+| Cleanup verification | |
 
 ## Observations
 

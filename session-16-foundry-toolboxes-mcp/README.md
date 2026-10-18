@@ -19,7 +19,7 @@ Foundry supplies the toolbox resource and supported MCP integration. The MCP ser
 
 ## Content and execution status
 
-This session now includes a runnable implementation, pinned dependencies, local tests, configuration examples and explicit Azure commands. Start with [RUNNING.md](RUNNING.md). Local checks exercise application behavior and supported protocol libraries; no live Azure deployment, scan, model-quality result or training completion is claimed.
+This session now includes a runnable implementation, pinned dependencies, local tests, configuration examples and explicit Azure commands. Start with [RUNNING.md](RUNNING.md).
 
 No Northstar agent or previous session is required. General Azure access is still required for the live Microsoft capability demo. Tool support varies by model/region. The write extension is optional and requires an implemented, authenticated demo server; the MCP implementation is included; no public server deployment is claimed.
 

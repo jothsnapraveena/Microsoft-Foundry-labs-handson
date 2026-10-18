@@ -133,12 +133,16 @@ def invoke_agent(client, name, version, prompt, store=False):
 
 
 def chat(client, deployment, instructions, prompt):
-    response = client.chat.completions.create(
-        model=deployment, messages=[{"role": "system", "content": instructions},
-                                    {"role": "user", "content": prompt}])
-    return {"answer": response.choices[0].message.content or "", "response_id": response.id,
+    response = client.responses.create(model=deployment, instructions=instructions, input=prompt, store=False)
+    if response.status != "completed":
+        raise RuntimeError("Target response did not complete")
+    raw_usage = primitive(response.usage) if response.usage else None
+    usage = {"prompt_tokens": raw_usage.get("input_tokens"),
+             "completion_tokens": raw_usage.get("output_tokens"),
+             "prompt_tokens_details": {"cached_tokens": (raw_usage.get("input_tokens_details") or {}).get("cached_tokens", 0)}} if raw_usage else None
+    return {"answer": response.output_text or "", "response_id": response.id,
             "response_model": response.model,
-            "usage": primitive(response.usage) if response.usage else None}
+            "usage": usage, "raw_usage": raw_usage}
 
 
 def poll(fetch, terminal, timeout=600, interval=5):

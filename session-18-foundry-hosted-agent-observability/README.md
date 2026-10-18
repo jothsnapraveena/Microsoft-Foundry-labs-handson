@@ -19,7 +19,7 @@ Foundry hosts the agent and provides supported deployment and observability inte
 
 ## Content and execution status
 
-This session now includes a runnable implementation, pinned dependencies, local tests, configuration examples and explicit Azure commands. Start with [RUNNING.md](RUNNING.md). Local checks exercise application behavior and supported protocol libraries; no live Azure deployment, scan, model-quality result or training completion is claimed.
+This session now includes a runnable implementation, pinned dependencies, local tests, configuration examples and explicit Azure commands. Start with [RUNNING.md](RUNNING.md).
 
 No Northstar agent or previous session is required. General Azure access is still required for the live Microsoft capability demo. Verify current hosting availability, protocol libraries and deployment path. This package includes the protocol host and image build helper; no deployed Azure container is claimed.
 

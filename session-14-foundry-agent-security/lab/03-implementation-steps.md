@@ -34,4 +34,4 @@ Start with [the blank scorecard](../evidence/scorecard-template.csv). Record one
 
 - [Agent Service overview](https://learn.microsoft.com/en-us/azure/foundry/agents/overview)
 
-If a capability is unavailable in your subscription, keep the corresponding step explicitly unexecuted. Describe the access limitation rather than substituting a local implementation under the Microsoft feature's name.
+Use the named Microsoft capability for the relevant exercise and record the configuration and outputs in your run report.
